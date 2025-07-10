@@ -7,12 +7,15 @@
     private static void Main(string[] args)
     {
         Solution sol = new Solution();
-        //Console.WriteLine($"{sol.Solution0708(3, 4)}");
+        Console.WriteLine($"{sol.Solution07102(2)}");
+        
 
         CSstudy cSstudy = new CSstudy();
         //cSstudy.DataType();
 
         Solution sl = new Solution();
-        Console.WriteLine($"{sol.Solution07092(3, 2)}");
+        //Console.WriteLine($"{sol.Solution07092(3, 2)}");
+
+        //cSstudy.AraayExample();
     }
 }
