@@ -1,7 +1,41 @@
+using System.Formats.Asn1;
 using System.Security.Cryptography;
 
 class Solution
 {
+    public int Solution07112(int n)
+    {
+        int answer = 0;
+
+        for (int i = 1; i <= n; i++)
+        {
+            if (i % 2 == 0)
+            {
+                answer += i;
+            }
+        }
+        return answer;
+    }
+
+    /// <summary>
+    /// 몇인분
+    /// </summary>
+    /// <param name="n">양꼬치 개수</param>
+    /// <param name="k">음료수 개수</param>
+    /// <returns></returns>
+    public int Solution0711(int n, int k)
+    {
+        // 양꼬치 10인분 먹으면 음료수 하나 서비스
+        int answer = 0;
+
+        int did = 12000; // 양꼬치
+        int water = 2000; // 음료수
+        int service = n / 10; // 서비스개수 
+
+        answer = (did * n) + (water * k) - (service * water);
+
+        return answer;
+    }
     public int Solution07102(int angle)
     {
 
@@ -35,7 +69,7 @@ class Solution
             str = "평";
         }
         Console.WriteLine($"{str}각입니다.");
-       
+
         return result;
     }
 

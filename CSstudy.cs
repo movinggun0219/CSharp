@@ -1,5 +1,44 @@
+using System.Collections;
+
 class CSstudy
 {
+
+    public void ListSample()
+    {
+        // List<int> myList = new List<int>();
+        var myList = new List<int>();
+        myList.Add(90);
+        myList.Add(88);
+        myList.Add(75);
+        int val = myList[1];
+
+        var chrList = new List<char>();
+        chrList.Add('b');
+
+        var boolList = new List<bool>();
+        boolList.Add(false);
+
+        var iarray = new int[100];
+        iarray[2] = 10;
+        myList.Add(10);
+        Console.WriteLine(iarray.Length);
+        Console.WriteLine(myList.Count);
+    }
+    public void ArrayListSample()
+    {
+        // ArrayList mtList = new ArrayList();
+        var myList = new ArrayList();
+        myList.Add(90);
+        myList.Add(88);
+        myList.Add(75);
+        int val = (int)myList[1];
+        Console.WriteLine(val);
+        Console.WriteLine(myList[0]);
+
+    
+    }
+    
+
     public void AraayExample()
     {
         int sum = 0;
@@ -20,7 +59,7 @@ class CSstudy
 
         for (int i = 0; i < nums.Length; i++)
         {
-            
+
             if (i == 9)
             {
                 Console.WriteLine($"{nums[i]} ");
