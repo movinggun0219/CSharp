@@ -2,6 +2,56 @@ using System.Collections;
 
 class CSstudy
 {
+    public void StackQueue()
+    {
+        //Stack<float> s = new Stack<float>();
+        var s = new Stack<float>();
+        s.Push(10.5f);
+        s.Push(3.54f);
+        s.Push(4.22f);
+
+        float pp = s.Peek();
+        Console.WriteLine($"pp: {pp}");
+
+        float pp3 = s.Pop();
+        Console.WriteLine($"pp3: {pp3}");
+
+
+        Queue<int> q = new Queue<int>();
+        q.Enqueue(120);
+        q.Enqueue(130);
+        q.Enqueue(150);
+
+        int next = q.Peek();
+        Console.WriteLine("next = " + next);
+
+        
+
+    }
+
+    public void LinkedListSample()
+    {
+        //LickedList<string> list = new LickedList<string>();
+        var list = new LinkedList<string>();
+
+        list.AddLast("Apple");
+        list.AddLast("Banana");
+
+        var node = list.Find("Banana");
+        var newNode = new LinkedListNode<string>("Grape");
+
+        list.AddAfter(node, newNode);
+        list.AddAfter(node, "Kiwi");
+
+        list.ToList<string>().ForEach(p => Console.WriteLine(p));
+
+        foreach (var item in list)
+        {
+            Console.WriteLine(item);
+        }
+
+    }
+
 
     public void ListSample()
     {

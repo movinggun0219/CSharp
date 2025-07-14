@@ -6,24 +6,37 @@
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        Solution sol = new Solution();
-        //Console.WriteLine($"{sol.Solution07102(2)}");
 
+        var intArray = new int[] { 1, 2, 3, 4, 5 };
+        Solution sol = new Solution();
+
+        PrintIntarray(sol.Solution07142(intArray));
 
         CSstudy cSstudy = new CSstudy();
-        //cSstudy.DataType();
+        // cSstudy.StackQueue();
 
-        Solution sl = new Solution();
-        //Console.WriteLine($"{sol.Solution07092(3, 2)}");
-
-        //cSstudy.AraayExample();
-
-        //cSstudy.ListSample();
-
-        //Console.WriteLine($"{sol.Solution07112(4)}");
-        MakeLotto();
+        sol.Solution07142(intArray);
     }
 
+    
+    /// <summary>
+    /// 정수 배열 뒤집기
+    /// </summary>
+    /// <param name="answerArray"></param>
+    public static void PrintIntarray(int[] answerArray)
+    {
+
+        Console.Write("[");
+        for (int i = 0; i < answerArray.Length; i++)
+        {
+            Console.Write($"{answerArray[i]}");
+            if (i != answerArray.Length - 1)
+            {
+                Console.Write(",");
+            }
+        }
+        Console.Write("]");
+    }
 
     /// <summary>
     /// 
@@ -45,13 +58,13 @@
 
         for (int i = 0; i < 6; i++)
         {
-            int index = rand.Next(0,ballList.Count) ;
+            int index = rand.Next(0, ballList.Count);
             LottoList.Add(ballList[index]);
             //Console.Write($" [{index}] ");
             //Console.WriteLine($"{ballList[index]}");
             ballList.RemoveAt(index);
         }
-         
+
 
         foreach (int num in LottoList)
         {

@@ -3,6 +3,42 @@ using System.Security.Cryptography;
 
 class Solution
 {
+    public int[] Solution07142(int[] num_list)
+    {
+        int len = num_list.Length;
+        int[] answer = new int[len];
+
+
+        for (int i = len-1;  i >= 0; i--)
+        {
+            answer[i] = num_list[i];
+            //Console.WriteLine($"[{answer[i]}]");
+        }
+
+        return answer;
+    }
+    public double Solution0714(int[] numbers)
+    {
+
+        double answer = 0;
+
+        /*
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            answer += numbers[i];
+        }
+        */
+
+        foreach (var item in numbers)
+        {
+            answer += item;
+        }
+
+
+        answer /= numbers.Length;
+
+        return answer;
+    }
     public int Solution07112(int n)
     {
         int answer = 0;
