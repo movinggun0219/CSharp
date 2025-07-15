@@ -2,6 +2,33 @@ using System.Collections;
 
 class CSstudy
 {
+
+    public void hashTableSample()
+    {
+        Hashtable ht = new Hashtable();
+        ht.Add("irina", "Irina SP");
+        ht.Add("tom", "TomCr");
+
+        if (ht.Contains("tom"))
+        {
+            Console.WriteLine(ht["tom"]);
+        }
+
+        // Dictionary<int, string> emp = new Dictionary<int, string>();
+        var emp = new Dictionary<int, string>();    //  <<간편하게 var를 써서 짧게사용가능
+        emp.Add(1001, "jane");
+        emp.Add(1002, "Tom");
+        emp.Add(1003, "cindy");
+
+        if (emp.ContainsKey(1002) == false) // 1002번이 추가가 안되면 처리
+        {
+            emp.Add(1002, "Kim");
+        }
+
+        string name = emp[1002];
+        Console.WriteLine(name);
+
+    }
     public void StackQueue()
     {
         //Stack<float> s = new Stack<float>();
@@ -25,7 +52,7 @@ class CSstudy
         int next = q.Peek();
         Console.WriteLine("next = " + next);
 
-        
+
 
     }
 

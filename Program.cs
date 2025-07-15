@@ -7,20 +7,24 @@
     private static void Main(string[] args)
     {
 
-        var intArray = new int[] { 1, 2, 3, 4, 5 };
+        var intArray = new int[] { 1,3,5,7 };
         Solution sol = new Solution();
+  
+        //PrintIntarray(sol.Solution0715(intArray));
+        Console.WriteLine(sol.Solution07152("abcdef","f"));
 
-        PrintIntarray(sol.Solution07142(intArray));
 
         CSstudy cSstudy = new CSstudy();
         // cSstudy.StackQueue();
 
-        sol.Solution07142(intArray);
+        
+
+        //cSstudy.hashTableSample();
     }
 
     
     /// <summary>
-    /// 정수 배열 뒤집기
+    /// 정수 배열 나오게하기
     /// </summary>
     /// <param name="answerArray"></param>
     public static void PrintIntarray(int[] answerArray)
@@ -32,7 +36,7 @@
             Console.Write($"{answerArray[i]}");
             if (i != answerArray.Length - 1)
             {
-                Console.Write(",");
+                Console.Write(", ");
             }
         }
         Console.Write("]");
@@ -43,20 +47,23 @@
     /// </summary>
     public static void MakeLotto()
     {
+        const int TOTAL_BALLS = 45; // 전체 공 개수 const = 상수 
+        const int PICK_BALLS = 6;   // 뽑는 공 수
+
         List<int> ballList = new List<int>();
         List<int> LottoList = new List<int>();
 
         Random rand = new Random();
 
 
-        for (int i = 1; i <= 45; i++)
+        for (int i = 1; i <= TOTAL_BALLS; i++)
         {
             ballList.Add(i);
         }
 
         Console.WriteLine($"{ballList.Count}");
 
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < PICK_BALLS; i++)
         {
             int index = rand.Next(0, ballList.Count);
             LottoList.Add(ballList[index]);

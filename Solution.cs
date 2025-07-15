@@ -1,15 +1,98 @@
-using System.Formats.Asn1;
-using System.Security.Cryptography;
+
+using System.Text;
 
 class Solution
 {
+
+    public string Solution07152(string my_string, string letter)
+    {
+        string answer = string.Empty; // ""; 
+        answer = my_string.Replace(letter,string.Empty); //rebplace 성질을 이용하여 letter자리에 대신 쓰기
+
+
+        // stringBuilder
+        //StringBuilder sb = new StringBuilder();
+        /*
+        var sb = new StringBuilder();
+
+        foreach (var item in my_string)
+        {
+            if (item.ToString().CompareTo(letter) != 0)  //compaterto로 스트링으로 변환된 값을 연산해준다.
+            {
+                sb.Append(item); // 값 더하기
+            }
+        }
+
+        answer = sb.ToString();
+        */
+
+        // for, foreach
+        /*
+        for (int i = 0; i < my_string.Length; i++)
+        {
+            if (my_string[i].ToString() != letter)
+            {
+                answer += my_string[i];
+            }
+        }
+
+        foreach (var item in my_string)
+        {
+            if (item != letter[0])
+            {
+                answer += item;
+            }
+        }
+        */
+
+        return answer;
+    }
+    /// <summary>
+    /// 짝수 홀수 개수
+    /// </summary>
+    /// <param name="num_list"></param>
+    /// <returns></returns>
+    public int[] Solution0715(int[] num_list)
+    {
+        // int[] answer = new int[2]; // 홀수 짝수 표시
+        var answer = new int[2] { 0, 0 }; // 짧게 표시
+
+        for (int i = 0; i < num_list.Length; i++) // 1안
+        {
+            if (num_list[i] % 2 == 0)
+            {
+                answer[0]++;
+            }
+            else
+            {
+                answer[1]++;
+            }
+        }
+
+        foreach (var item in num_list)  // 2안
+        {
+            answer[item % 2]++;
+
+            // if (item % 2 == 0)
+            // {
+            //     answer[0]++;
+            // }
+            // else
+            // {
+            //     answer[1]++;
+            // }
+        }
+
+        return answer;
+    }
+
     public int[] Solution07142(int[] num_list)
     {
         int len = num_list.Length;
         int[] answer = new int[len];
 
 
-        for (int i = len-1;  i >= 0; i--)
+        for (int i = len - 1; i >= 0; i--)
         {
             answer[i] = num_list[i];
             //Console.WriteLine($"[{answer[i]}]");
