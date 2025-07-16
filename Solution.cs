@@ -1,13 +1,66 @@
 
 using System.Text;
-
+using System.Collections.Generic;
 class Solution
 {
 
+    public string Solution07162(string my_string)
+    {
+        var list = new List<char>(my_string);
+        list.Reverse();
+        string answer = new string(list.ToArray());
+
+
+        /*
+        var list = new List<char>(my_string);
+        list.Reverse();
+        string answer = ;
+        */
+
+        /*
+        var sb = new StringBuilder();
+        foreach (var item in my_string)
+        {
+            sb.Insert(0,item);
+        }
+
+        string answer = sb.ToString();
+        s*/
+        /*
+            int len = my_string.Length;
+            //string answer = string.Empty;
+            char[] answerArray = new char[len];
+
+             for (int i = 0; i < len; i++)
+            {
+                answerArray[len-1 -i] = my_string[i];
+            }
+
+            string answer = new string(answerArray);
+            */
+
+
+
+        return answer;
+    }
+
+    /// <summary>
+    /// 편지
+    /// </summary>
+    /// <param name="message"></param>
+    /// <returns></returns>
+    public int Solution0716(string message)
+    {
+        int answer = 0;
+
+        answer = message.Length * 2;
+
+        return answer;
+    }
     public string Solution07152(string my_string, string letter)
     {
         string answer = string.Empty; // ""; 
-        answer = my_string.Replace(letter,string.Empty); //rebplace 성질을 이용하여 letter자리에 대신 쓰기
+        answer = my_string.Replace(letter, string.Empty); //rebplace 성질을 이용하여 letter자리에 대신 쓰기
 
 
         // stringBuilder

@@ -9,15 +9,20 @@
 
         var intArray = new int[] { 1,3,5,7 };
         Solution sol = new Solution();
-  
-        //PrintIntarray(sol.Solution0715(intArray));
-        Console.WriteLine(sol.Solution07152("abcdef","f"));
 
+        //PrintIntarray(sol.Solution0715(intArray));
+        //Console.WriteLine(sol.Solution07152("abcdef","f"));
+        
+        //Console.WriteLine(sol.Solution0716("happy birthday!"));
+        //Console.WriteLine(sol.Solution0716("I love you~"));
+        
+
+        Console.WriteLine(sol.Solution07162("jaron"));
 
         CSstudy cSstudy = new CSstudy();
         // cSstudy.StackQueue();
 
-        
+        //cSstudy.SortedDicSample();
 
         //cSstudy.hashTableSample();
     }
