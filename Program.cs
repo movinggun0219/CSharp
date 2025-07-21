@@ -1,33 +1,44 @@
 ﻿internal class Program
 {
+   
+
     /// <summary>
     /// Main 함수 
     /// </summary>
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-
-        var intArray = new int[] { 1,3,5,7 };
+        var intArray = new int[] { 1, 3, 5, 7 };
         Solution sol = new Solution();
+        //Console.WriteLine(sol.soulution0718([0,31,24,10,1,9]));
 
-        //PrintIntarray(sol.Solution0715(intArray));
-        //Console.WriteLine(sol.Solution07152("abcdef","f"));
+        string bus = "nice to meet you";
+        Console.WriteLine(sol.solution07212(1234));
+
+        CSstudy study = new CSstudy();
+        //study.SbSample();
+        //study.EnumSample();
+
         
-        //Console.WriteLine(sol.Solution0716("happy birthday!"));
-        //Console.WriteLine(sol.Solution0716("I love you~"));
-        
-
-        Console.WriteLine(sol.Solution07162("jaron"));
-
-        CSstudy cSstudy = new CSstudy();
-        // cSstudy.StackQueue();
-
-        //cSstudy.SortedDicSample();
-
-        //cSstudy.hashTableSample();
     }
 
-    
+
+    /// <summary>
+    /// 정수 배열의 합을 구하기
+    /// </summary>
+    /// <param name="scoresArray"></param>
+    /// <returns></returns>
+    public static int CalculateSum(int[] scoresArray)
+    {
+        int sum = 0;
+        for (int i = 0; i < scoresArray.Length; i++)
+        {
+            sum += scoresArray[i];
+        }
+
+        return sum;
+    }
+
     /// <summary>
     /// 정수 배열 나오게하기
     /// </summary>

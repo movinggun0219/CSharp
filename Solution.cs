@@ -3,6 +3,102 @@ using System.Text;
 using System.Collections.Generic;
 class Solution
 {
+    public int solution07212(int n)
+    {
+        int answer = 0;
+        string str = n.ToString();
+       
+        foreach (var item in str)
+        {
+           answer += (item - '0');
+        }
+
+        return answer;   
+    }
+    public string solution0721(string my_string)
+    {
+        return my_string.Replace("a", "")
+            .Replace("e", "")
+            .Replace("i", "")
+            .Replace("o", "")
+            .Replace("u", "");
+        /*
+        string answer = string.Empty;
+        
+        //for, if 를 사용한 방법 
+        for (int i = 0; i < my_string.Length; i++)
+        {
+            if ((my_string[i] != 'a') &&
+                (my_string[i] != 'e') &&
+                (my_string[i] != 'i') &&
+                (my_string[i] != 'o') &&
+                (my_string[i] != 'u'))
+            {
+                // string연산이니까, stringBuilder 를 나중에 쓰자 ★
+                answer += my_string[i];
+            }
+        }
+        return answer;
+        */
+    }
+
+    public int soulution0718(int[] numbers)
+    {
+        int answer = 0;
+
+
+        // for (int i = 0; i < numbers.Length-1; i++)
+        // {
+        //     for (int j = i+1; j < numbers.Length; j++)
+        //     {
+
+        //         answer = Math.Max(answer, numbers[i] * numbers[j]);
+        //     }
+        // }
+
+        //정렬을 이용한 방법
+        // Array.Sort(numbers);
+        // answer = numbers[numbers.Length-1] * numbers[numbers.Length - 2];
+
+
+        var list = new List<int>(numbers);
+        list.Sort();
+        list.Reverse();
+        //answer = list[list.Count-1] * list[list.Count -2];
+
+        answer = list[0] * list[1];
+        return answer;
+    }
+    public int Solution07172(int n, int t)
+    {
+        return n << t;
+
+        // for (int i = 0; i < t; i++)
+        // {
+        //     n *= 2;
+        // }
+        // answer = n;
+
+        //answer = (int)(n * Math.Pow(2, t));
+        // 시간당 2배만큼 증가
+
+        //return answer;
+    }
+    public int Solution0717(int n)
+    {
+        int answer = 0;
+        // 온전한 피자 한판으로 먹을 수 있는 사람 수
+
+        int pizza = n / 7;
+        // 나머지 피자 조각 먹은 사람 수
+
+        int res = ((n % 7) == 0) ? 0 : 1;
+
+        answer = pizza + res;
+
+
+        return answer;
+    }
 
     public string Solution07162(string my_string)
     {

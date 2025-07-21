@@ -1,7 +1,151 @@
 using System.Collections;
+using System.Text;
 
 class CSstudy
 {
+    string GetName() { return ""; }
+    static public int GetId() { return 0; }
+    public static int GetId2(){ return 0; }
+
+     [Flags]
+    enum Border
+    {
+        None = 0,
+        Top = 1,
+        Right = 2,
+        Bottom = 4,
+        Left = 8
+    }
+
+    enum City
+    {
+        Seoul,
+        Daejun,
+        Busan = 5,
+        Jeju = 10
+    }
+    public enum GameState { Ready, Run }
+    public enum Category
+    {
+        Cake,
+        IceCream,
+        Bread
+    }
+    public void EnumSample()
+    {
+        Category category;
+        category = Category.Bread;
+
+        City myCity = City.Seoul;
+
+        int cityValue = (int)myCity;
+        // if (myCity == City.Seoul)
+        // {
+        //     Console.WriteLine("hihi");
+        // }
+
+        // OR 연산자로 다중 플래그 할당
+        Border b = Border.Top | Border.Bottom;
+        
+        // & 연산자로 플래그 체크 
+        if  ((b & Border.Top) != 0)
+        {
+            // hasFlag()이용 플래그 체크
+            if (b.HasFlag(Border.Bottom))
+            {
+                // "Top, Bottom" 출력
+                Console.WriteLine(b.ToString());
+            }
+        }
+    }
+    public void SbSample()
+    {
+        var sb = new StringBuilder();
+        for (int i = 1; i <= 26; i++)
+        {
+            sb.Append(i.ToString());
+            sb.Append(System.Environment.NewLine);
+        }
+        string s = sb.ToString();
+
+        Console.WriteLine(s);
+
+        sb.Clear();
+
+        sb.Append((char)'A' + 3);
+        Console.WriteLine(sb.ToString());
+    }
+    public void ASCIISample()
+    {
+        string s = "C# studies";
+
+        for (int i = 0; i < s.Length; i++)
+        {
+            //Console.WriteLine($"{i} : {s[i]}");
+        }
+
+        string str = "Hello";
+        char[] charArray = str.ToCharArray();
+
+        for (int i = 0; i < charArray.Length; i++)
+        {
+            //Console.WriteLine($"{i}: {charArray[i]}");
+        }
+
+        char[] charArray2 = { 'A', 'B', 'C', 'D' };
+        string s2 = new string(charArray2);
+        //Console.WriteLine(s2);
+
+        //문자연산
+        char c1 = 'A';
+        char c2 = (char)(c1 + 3);
+        Console.WriteLine(c2);
+
+    }
+    public void StringSample()
+    {
+        string s1 = "C#";
+        string s2 = "Programming";
+
+        int len = s2.Length - 3;
+        string s3 = s2.Substring(3, len);
+        Console.WriteLine(s3);
+    }
+    public void Arraysample()
+    {
+        // 1차 배열
+        string[] players = new string[10];
+        string[] Regions = { "서울", "경기", "부산" };
+
+        // 2차 배열 선언 및 초기화
+        string[,] Depts = { { "김과장", "경리부" }, { "이과장", "총무부" } };
+
+
+        // 3차 배열 선언
+        string[,,] Cubes;
+
+        int[,] aa = new int[3, 3];
+        int[][] A = new int[3][];
+
+        A[0] = new int[2];
+        A[1] = new int[3] { 1, 2, 3 };
+        A[2] = new int[4] { 1, 2, 3, 4 };
+        A[0][0] = 1;
+        A[0][1] = 2;
+        aa[0, 0] = 1;
+        aa[0, 1] = 2;
+
+        int sum = 0;
+        int[] scores = { 80, 78, 60, 90, 100 };
+        for (int i = 0; i < scores.Length; i++)
+        {
+            sum += scores[i];
+        }
+        Console.WriteLine($"sum = {sum}");
+
+
+    }
+
     public void SortedDicSample()
     {
         var tmap = new SortedDictionary<int, string>();
