@@ -13,8 +13,7 @@
         //Console.WriteLine(sol.soulution0718([0,31,24,10,1,9]));
 
         string bus = "nice to meet you";
-        Console.WriteLine(sol.solution07212(1234));
-
+        Console.WriteLine(sol.solution07222([199,72,222]));
         CSstudy study = new CSstudy();
         //study.SbSample();
         //study.EnumSample();

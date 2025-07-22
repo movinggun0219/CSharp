@@ -1,19 +1,52 @@
 
 using System.Text;
 using System.Collections.Generic;
+using System.Formats.Asn1;
 class Solution
 {
+    public int solution07222(int[] sides)
+    {
+        int answer = 0;
+        var list = new List<int> (sides);
+        list.Sort();
+
+        //Array.Sort(sides);
+        //answer = (sides[2] < sides[0] + sides[1]) ? 1 : 2;
+
+        answer = (list[2] < list[0] + list[1]) ? 1 : 2;
+
+
+        return answer;
+    }
+    public int solution0722(int[] array, int height)
+    {
+        int answer = 0;
+        // for (int i = 0; i < array.Length; i++)
+        // {
+        //     if (array[i] > height)
+        //     {
+        //         answer++;
+        //     }
+        // }
+
+        foreach (var item in array)
+        {
+            answer += (item > height) ? 1 : 0;
+        }
+
+        return answer;
+    }
     public int solution07212(int n)
     {
         int answer = 0;
         string str = n.ToString();
-       
+
         foreach (var item in str)
         {
-           answer += (item - '0');
+            answer += (item - '0');
         }
 
-        return answer;   
+        return answer;
     }
     public string solution0721(string my_string)
     {
