@@ -4,10 +4,169 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
-    public int solution07222(int[] sides)
+    public int[] solution07282(string[] strlist)
+    {
+        int len = strlist.Length;
+        int[] answer = new int[len];
+
+        for (int i = 0; i < len; i++)
+        {
+            answer[i] = strlist[i].Length;
+        }
+        
+        return answer;
+        
+        /*
+        var answer = new List<int>();
+
+        foreach (var item in strlist)
+        {
+            answer.Add(item.Length);
+        }
+
+        return answer.ToArray();
+        */
+    }
+
+    public int[] solution0728(int money)
+    {
+        /*
+        int[] answer = new int[2] ;
+        answer[0] = money / 5500;
+
+        answer[1] = money % 5500;
+
+        return answer;
+        */
+
+        return new int[] { money / 5500, money % 5500 };
+    }
+    public int[] solution07252(int n, int[] numlist)
+    {
+        var answer = new List<int>();
+
+        for (int i = 0; i < numlist.Length; i++)
+        {
+            if (numlist[i] % n == 0)
+            {
+                answer.Add(numlist[i]);
+            }
+        }
+        int[] myArray = answer.ToArray();
+
+
+        return myArray;
+    }
+    public int solution0725(int n)
     {
         int answer = 0;
-        var list = new List<int> (sides);
+
+        for (int i = 1; i <= n; i++)
+        {
+            if (n % i == 0)
+            {
+                answer++;
+            }
+        }
+
+        return answer;
+    }
+    public int solution07242(string[] s1, string[] s2)
+    {
+        int answer = 0;
+
+        foreach (var item in s1)
+        {
+            foreach (var item2 in s2)
+            {
+                if (item.Equals(item2))
+                {
+                    answer++;
+                }
+                /*if (item == item2)
+                {
+                    answer++;
+                }
+                */
+            }
+        }
+
+        return answer;
+    }
+    public int solution0724(int[] dot)
+    {
+
+        int answer = 0;
+
+        if (dot[0] > 0)
+        {
+            if (dot[1] > 0)
+            {
+                return 1;
+            }
+            else if (dot[1] < 0)
+            {
+                return 4;
+            }
+        }
+
+        else if (dot[0] < 0)
+        {
+            if (dot[1] > 0)
+            {
+                return 2;
+            }
+            else if (dot[1] < 0)
+            {
+                return 3;
+            }
+        }
+
+
+        // int answer = (dot[0] > 0) ? (dot[1] > 0) ? 1 :4 :(dot[1]>0 )? 2:3;
+
+
+        return answer;
+    }
+    public int solution0723(int slice, int n)
+    {
+        //int answer = 0;
+
+        int answer = (n % slice > 0) ? n / slice + 1 : n / slice;
+        // answer = n / slice;
+
+        // if (n % slice != 0)
+        // {
+        //     answer++;
+        // }
+
+        /*
+        for (int i = 1; i <= n; i += slice)
+        {
+            answer++;
+        }
+        */
+        return answer;
+    }
+    public int[] solution0723(int[] numbers, int num1, int num2)
+    {
+        // 리턴할 배열의 크기를 먼저 구한다
+        int len = num2 - num1 + 1;
+        // 구한 크기만큼 배열을 선언
+        int[] answer = new int[len];
+
+        for (int i = 0; i < len; i++)
+        {
+            answer[i] = numbers[num1 + i];
+        }
+
+        return answer;
+    }
+    public int solution07222(int[] sides)
+    {
+
+        int answer = 0;
+        var list = new List<int>(sides);
         list.Sort();
 
         //Array.Sort(sides);

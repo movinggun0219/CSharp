@@ -1,6 +1,6 @@
 ﻿internal class Program
 {
-   
+
 
     /// <summary>
     /// Main 함수 
@@ -8,19 +8,34 @@
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] { 1, 3, 5, 7 };
-        Solution sol = new Solution();
-        //Console.WriteLine(sol.soulution0718([0,31,24,10,1,9]));
+        var intArray = new int[] { 4, 11 };
+        var strs = new string[] { "We", "are", "the", "world!"};
+        var strs2 = new string[] { "com", "b", "d", "p", "c" };
 
-        string bus = "nice to meet you";
-        Console.WriteLine(sol.solution07222([199,72,222]));
+        Solution sol = new Solution();
+
+        //Console.WriteLine(sol.solution0728(5500));
+        PrintIntarray(sol.solution07282(strs));
+
         CSstudy study = new CSstudy();
         //study.SbSample();
-        //study.EnumSample();
 
-        
+        /*foreach (int num in GetNumber())
+        {
+            Console.WriteLine(num);
+        }
+        */
+        //study.ExceptionSample
     }
 
+    
+    static IEnumerable<int> GetNumber()
+    {
+        yield return 10;
+        yield return 20;
+        yield return 30;
+        
+    }
 
     /// <summary>
     /// 정수 배열의 합을 구하기

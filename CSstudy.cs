@@ -3,6 +3,27 @@ using System.Text;
 
 class CSstudy
 {
+    public void ExceptionSample()
+    {
+        int[] intArr = new int[3];
+        try
+        {
+            intArr[123] = 0;
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine($"AE....");
+        }
+        catch (IndexOutOfRangeException ex)
+        {
+            Console.WriteLine($"ior 오류 발생");
+        }
+        finally
+        {
+            Console.WriteLine("에러 없음");
+        }
+    }
+
     string GetName() { return ""; }
     static public int GetId() { return 0; }
     public static int GetId2(){ return 0; }
