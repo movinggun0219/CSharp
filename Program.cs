@@ -1,4 +1,5 @@
-﻿internal class Program
+﻿using Ohoh;
+internal class Program
 {
 
 
@@ -9,32 +10,28 @@
     private static void Main(string[] args)
     {
         var intArray = new int[] { 4, 11 };
-        var strs = new string[] { "We", "are", "the", "world!"};
+        var strs = new string[] { "We", "are", "the", "world!" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
 
         Solution sol = new Solution();
 
-        //Console.WriteLine(sol.solution0728(5500));
-        PrintIntarray(sol.solution07282(strs));
+        Console.WriteLine(sol.solution07292("hello",3));
+        //PrintIntarray(sol.solution07282(strs));
 
         CSstudy study = new CSstudy();
         //study.SbSample();
 
-        /*foreach (int num in GetNumber())
-        {
-            Console.WriteLine(num);
-        }
-        */
-        //study.ExceptionSample
+        //Util.PrintIntarray(sol.solution07282(strs));
+
     }
 
-    
+
     static IEnumerable<int> GetNumber()
     {
         yield return 10;
         yield return 20;
         yield return 30;
-        
+
     }
 
     /// <summary>

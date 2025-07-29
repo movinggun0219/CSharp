@@ -4,6 +4,36 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public string solution07292(string my_string, int n)
+    {
+        string answer = string.Empty;
+
+        foreach (var item in my_string)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                answer += item;
+            }
+        }
+        return answer;
+    }
+
+    public int solution0729(string str1, string str2)
+    {
+        int answer = 0;
+        if (str1.Contains(str2))
+        {
+            answer = 1;
+        }
+        else
+        {
+            answer = 2;
+        }
+
+        int answer2 = (str1.Contains(str2) ? 1 : 2);
+
+        return answer2;
+    }
     public int[] solution07282(string[] strlist)
     {
         int len = strlist.Length;
@@ -13,9 +43,9 @@ class Solution
         {
             answer[i] = strlist[i].Length;
         }
-        
+
         return answer;
-        
+
         /*
         var answer = new List<int>();
 
