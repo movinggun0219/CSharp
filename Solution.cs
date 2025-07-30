@@ -4,6 +4,56 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int solution07302(int n)
+    {
+        /*
+        int answer = 0, min = 1, max = 1000;
+        
+        for (int i = min; i <= max; i++)
+        {
+            if (i * i == n)
+            {
+                answer = 1;
+                break;
+            }
+            answer = 2;
+            
+        }
+        
+        return answer;
+        */
+        double answer = Math.Sqrt(n);
+        if (answer % 1 == 0)
+        {
+            return 1;
+        }
+        else
+            return 2;
+
+
+    }
+    public string solution0730(string[] arr)
+    {
+        string answer = "";
+
+        // foreach (var item in arr)
+        // {
+        //     answer += item;
+        // }
+
+
+        var sb = new StringBuilder();
+
+        foreach (var item in arr)
+        {
+            sb.Append(item);
+        }
+
+        answer = sb.ToString();
+
+        return answer;
+    }
+
     public string solution07292(string my_string, int n)
     {
         string answer = string.Empty;

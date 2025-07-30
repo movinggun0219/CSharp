@@ -10,12 +10,12 @@ internal class Program
     private static void Main(string[] args)
     {
         var intArray = new int[] { 4, 11 };
-        var strs = new string[] { "We", "are", "the", "world!" };
+        var strs = new string[] { "a","b","c" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
 
         Solution sol = new Solution();
 
-        Console.WriteLine(sol.solution07292("hello",3));
+        Console.WriteLine(sol.solution07302(144));
         //PrintIntarray(sol.solution07282(strs));
 
         CSstudy study = new CSstudy();
