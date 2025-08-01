@@ -4,6 +4,83 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int solution08012(int[] array)
+    {
+        var list = new List<int>(array);
+
+        list.Sort();
+
+        int index = list.Count / 2;
+        //int index = array.Length / 2;
+
+        return list[index];
+    }
+    /// <summary>
+    /// 배열 두배 만들기
+    /// </summary>
+    /// <param name="numbers"></param>
+    /// <returns></returns>
+    public int[] solution0801(int[] numbers)
+    {
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            //numbers[i] = numbers[i] * 2;
+            numbers[i] *= 2;
+
+            //numbers[i] <<= 1;
+        }
+
+        return numbers;
+    }
+    public int solution07312(int[] array, int n)
+    {
+        int answer = 0;
+
+        foreach (var item in array)
+        {
+            if (item == n)
+            {
+                answer++;
+            }
+        }
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] == n)
+            {
+                answer++;
+            }
+        }
+
+
+
+        return answer;
+    }
+
+    /// <summary>
+    /// 문자열 붙여서 출력하기
+    /// </summary>
+    public void Soulution0731()
+    {
+        String[] input;
+
+        Console.Clear();
+        input = Console.ReadLine().Split(' '); //split - 분리 
+
+        // String s1 = input[0];
+        // String s2 = input[1];
+        // string sum = s1 + s2;
+        // sum = sum.Trim();
+
+        //Console.WriteLine($"{sum}");
+        
+
+        for (int i = 0; i < input.Length; i++)
+        {
+            Console.Write($"{input[i]}");
+        }
+
+    }
     public int solution07302(int n)
     {
         /*

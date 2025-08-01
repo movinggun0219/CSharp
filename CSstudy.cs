@@ -3,6 +3,41 @@ using System.Text;
 
 class CSstudy
 {
+
+    public void Mtext()
+    {
+        MyCustomer mc = new MyCustomer();
+        mc.Name = "Kim";
+        mc.Age = 20;
+        //mc.SetAge(-23);
+        
+        Console.WriteLine(mc.GetcustomerData());
+        Console.WriteLine(mc.CalAge(30));
+    }
+    // 구조체 정의
+    public struct MyPoint
+    {
+        public int X;
+        public int Y;
+        public MyPoint(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
+        public override string ToString()
+        {
+            return string.Format("({0},{1})", X, Y);
+        }
+    }
+
+
+    public void StructTest()
+    {
+        var pt = new CSstudy.MyPoint(10, 12);
+        var pt2 = new CSstudy.MyPoint();
+        Console.WriteLine(pt.ToString());
+        Console.WriteLine(pt2.ToString());
+    }
     public void ExceptionSample()
     {
         int[] intArr = new int[3];

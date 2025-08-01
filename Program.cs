@@ -1,27 +1,27 @@
-﻿using Ohoh;
+﻿using System.Formats.Tar;
+using Ohoh; // Utill을 사용하기 위해 필요한 namespace선언
 internal class Program
 {
-
-
     /// <summary>
     /// Main 함수 
     /// </summary>
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] { 4, 11 };
-        var strs = new string[] { "a","b","c" };
+        var intArray = new int[] {9,-1,0};
+        var strs = new string[] { "a", "b", "c" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
 
         Solution sol = new Solution();
 
-        Console.WriteLine(sol.solution07302(144));
-        //PrintIntarray(sol.solution07282(strs));
+
+        Console.WriteLine(sol.solution08012(intArray));
+        //PrintIntarray(sol.solution08012(intArray));
+        //Util.PrintIntarray(sol.solution07282(strs));
+        //sol.Soulution0731();
 
         CSstudy study = new CSstudy();
         //study.SbSample();
-
-        //Util.PrintIntarray(sol.solution07282(strs));
 
     }
 
