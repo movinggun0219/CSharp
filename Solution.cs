@@ -4,6 +4,43 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int soulution08042(int price)
+    {
+        
+        if (price >= 500000)
+        {
+            price *= (int)(price * 0.8);
+        }
+        else if (price >= 300000)
+        {
+            price *= (int)(price * 0.9);
+        }
+        else if (price >= 100000)
+        {
+           price *= (int)(price * 0.95);
+        }
+
+        return price;
+    }
+    public int[] soulution0804(int n)
+    {
+
+        var list = new List<int>();
+
+        for (int i = 1; i <= n; i++)
+        {
+            if (i % 2 == 1)
+            {
+                list.Add(i);
+            }
+        }
+
+
+        int[] answer = list.ToArray();
+
+
+        return answer;
+    }
     public int solution08012(int[] array)
     {
         var list = new List<int>(array);

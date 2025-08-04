@@ -15,13 +15,13 @@ internal class Program
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution08012(intArray));
-        //PrintIntarray(sol.solution08012(intArray));
+        Console.WriteLine(sol.soulution08042(150000));
+        //PrintIntarray(sol.soulution0804(10));
         //Util.PrintIntarray(sol.solution07282(strs));
         //sol.Soulution0731();
 
         CSstudy study = new CSstudy();
-        //study.SbSample();
+        //study.CheckInput(1,2.0,null,true );
 
     }
 
