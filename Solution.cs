@@ -4,9 +4,56 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public string Solution0802(string my_string, int n)
+    {
+        /*
+        var list = new List<char>();
+        
+        for (int i = 0; i < n; i++)
+        {
+            list.Add(my_string[i]);
+        }
+
+        string answer = new string (list.ToArray());
+
+        return answer;
+        */
+
+        /*
+        string answer = "";
+        var sb = new StringBuilder();
+
+        for (int i = 0; i < n; i++)
+        {
+            //answer += my_string[i];
+            sb.Append(my_string[i]);
+        }
+        //return answer;
+        return sb.ToString();
+        */
+
+        return my_string.Substring(0, n);
+    }
+    public int Solution0805(int num, int n)
+    {
+        /*
+        if (num % n == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+        */
+
+        int answer = (num % n == 0) ? 1 : 0;
+
+        return answer;
+    }
     public int soulution08042(int price)
     {
-        
+
         if (price >= 500000)
         {
             price *= (int)(price * 0.8);
@@ -17,7 +64,7 @@ class Solution
         }
         else if (price >= 100000)
         {
-           price *= (int)(price * 0.95);
+            price *= (int)(price * 0.95);
         }
 
         return price;

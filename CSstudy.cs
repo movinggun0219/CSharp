@@ -1,8 +1,102 @@
 using System.Collections;
+using System.Diagnostics;
+using System.Reflection.Metadata;
 using System.Text;
 
 class CSstudy
 {
+
+    public void StringTest()
+    {
+        string s21 = "string ";
+        Console.WriteLine(s21.IndexOf('r'));
+    }
+    public void StandardNumericFormatString()
+    {
+        Console.WriteLine("C Example {0:C}", 123456f);
+        Console.WriteLine("D6 sample {0 : D6}", -1234);
+        Console.WriteLine("{0:E2}", -1052.0329112756f);
+        Console.WriteLine("{0:F4}", -1234.56f);
+        Console.WriteLine("{0:N3}", -1234.56f);
+        Console.WriteLine("{0:P1}", -0.39678f);
+        Console.WriteLine("{0:X4} {1:4}", 255, -1);
+    }
+
+    public void ParamSample()
+    {
+        //ref.초기화가 필요하다
+
+        Method1(10, 20, "Park");
+        int x = 1;
+        double y = 1.0;
+        double ret = GetData(ref x, ref y);
+
+        //ret = Calc(100, 20, "-");
+        //ret = Calc(b: 4, a: 3, calcType: "*");
+
+        Console.WriteLine($"x={x}, y = {y}, ret = {ret}");
+        Console.WriteLine("x = {0}, y = {1:0.0}, ret={2:0.0}", x, y, ret);
+
+
+        int c, d;
+        bool bret = GetData(10000, 2000, out c, out d);
+        Console.WriteLine($"c={c:#,#}: d = {d:#,#}: bret = {bret}");
+        Console.WriteLine("c = {0: #,#}: d= {1:#,#}:bret = {2}", c, d, bret);
+    }
+    public int Calc2(params int[] values)
+    {
+        return 0;
+    }
+
+    /// <summary>
+    /// 사칙연산 계산기
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <param name="calcType"></param>
+    /// <returns></returns>
+    /// <exception cref="ArithmeticException"></exception>
+    public static int Calc(int a, int b, string calcType = "+")
+    {
+        switch (calcType)
+        {
+            case "+": return a + b;
+            case "-": return a - b;
+            case "*": return a * b;
+            case "/": return a / b;
+            default:
+                throw new ArithmeticException();
+        }
+    }
+
+    public void Method3(int age = 10, int score = 0, bool live = true)
+    {
+
+    }
+    public void Method2(int age, int score = 100, int city = 11)
+    {
+
+    }
+
+    public void Method1(int age, int score, string name = "Name")
+    {
+        
+    }
+
+    public double GetData(ref int a, ref double b)
+    {
+        return ++a * ++b;
+    }
+
+    public bool GetData(int a, int b, out int c, out int d)
+    {
+        c = a + b;
+        d = a - b;
+        return true;
+    }
+
+
+
     void NullableTest()
     {
         int? a = null;

@@ -8,14 +8,14 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] {9,-1,0};
+        var intArray = new int[] { 9, -1, 0 };
         var strs = new string[] { "a", "b", "c" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
 
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.soulution08042(150000));
+        Console.WriteLine(sol.Solution0802("He110W0r1d",5));
         //PrintIntarray(sol.soulution0804(10));
         //Util.PrintIntarray(sol.solution07282(strs));
         //sol.Soulution0731();
@@ -23,6 +23,8 @@ internal class Program
         CSstudy study = new CSstudy();
         //study.CheckInput(1,2.0,null,true );
 
+        //study.ParamSample();
+        //study.StandardNumericFormatString();
     }
 
 
