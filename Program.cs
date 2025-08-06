@@ -15,15 +15,16 @@ internal class Program
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.Solution0802("He110W0r1d",5));
+        Console.WriteLine(sol.Solution08062(24));
         //PrintIntarray(sol.soulution0804(10));
         //Util.PrintIntarray(sol.solution07282(strs));
         //sol.Soulution0731();
 
         CSstudy study = new CSstudy();
         //study.CheckInput(1,2.0,null,true );
-
-        //study.ParamSample();
+        //sol.Solution0806();
+        
+        //study.EventTest();
         //study.StandardNumericFormatString();
     }
 

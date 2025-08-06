@@ -4,6 +4,45 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int Solution08062(int hp)
+    {
+        int answer = 0;
+        int a = 5; //장군개미 공격력
+        int b = 3; //병정개미 공격력
+        int c = 1; //일개미 공격력
+        
+        int aCount = hp / a;
+        hp = hp % a;
+
+        int bCount =  hp / b;
+        hp = hp % b;
+
+        //int cCount = hp / c;
+
+        answer = aCount + bCount + hp;
+        Console.WriteLine($"장군개미: {aCount}마리, 병정개미: {bCount}마리, 일개미: {hp}마리");
+
+        return answer;
+    }
+
+    public void Solution0806()
+    {
+        string[] s;
+        Console.Clear();
+        s = Console.ReadLine().Split(' ');
+        int n = Int32.Parse(s[0]);
+        int n2 = Convert.ToInt32(s[0]);
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine(" ");
+        }
+
+    }
     public string Solution0802(string my_string, int n)
     {
         /*

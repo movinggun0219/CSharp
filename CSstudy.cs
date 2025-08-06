@@ -6,6 +6,40 @@ using System.Text;
 class CSstudy
 {
 
+    class MyLesson
+    {
+        public event EventHandler Run;
+
+        public void RunEvent()
+        {
+            if(Run != null)
+            {
+                Run(this, EventArgs.Empty);
+            }
+        }
+        
+    }
+
+    public void EventTest()
+    {
+        MyLesson lesson = new MyLesson();
+
+        lesson.Run += new EventHandler(Lesson1);
+        lesson.Run += new EventHandler(Lesson2);
+
+        lesson.RunEvent();
+        lesson.Run -= new EventHandler(Lesson2);
+        lesson.RunEvent();
+    }
+    public void Lesson2(object sender, EventArgs e)
+    {
+        Console.WriteLine("두번째 레슨");
+    }
+    public void Lesson1(object sender, EventArgs e)
+    {
+        Console.WriteLine("첫번째 레슨");
+    }
+
     public void StringTest()
     {
         string s21 = "string ";
