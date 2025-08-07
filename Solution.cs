@@ -1,20 +1,92 @@
-
 using System.Text;
 using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public string Solution08072(string rsp)
+    {
+        // for (int i = 0; i < rsp.Length; i++)
+        // {
+        //     if (rsp[i] == '0')
+        //     {
+        //         answer += "5";
+        //     }
+        //     else if (rsp[i] == '2')
+        //     {
+        //         answer += "0";
+        //     }
+        //     else if (rsp[i] == '5')
+        //     {
+        //         answer += "2";
+        //     }
+        // }
+
+        const char rsp_rock = '0';
+        const char rsp_scissors = '2';
+        const char rsp_paper = '5';
+        
+
+
+        var sb = new StringBuilder();
+
+        foreach (var item in rsp)
+        {
+            if (string.Equals(item, rsp_rock))
+            {
+                sb.Append(rsp_paper);
+            }
+            else if (item == rsp_scissors)
+            {
+                sb.Append(rsp_rock);
+            }
+            else if (item == rsp_paper)
+            {
+                sb.Append(rsp_scissors);
+            }
+            else
+            {
+                Console.WriteLine("잘못입력됨");
+            }
+        }
+        
+
+        return sb.ToString();
+    }
+    /// <summary>
+    /// 공배수
+    /// </summary>
+    /// <param name="number"></param>
+    /// <param name="n"></param>
+    /// <param name="m"></param>
+    /// <returns></returns>
+    public int Solution0807(int number, int n, int m)
+    {
+        int answer = 0;
+
+        // if (number % n == 0 && number % m == 0)
+        // {
+        //     answer = 1;
+        // }
+        // else
+        // {
+        //     answer = 0;
+        // }
+
+        answer = ((number % n == 0) && (number % m == 0)) ? 1 : 0;
+
+        return answer;
+    }
     public int Solution08062(int hp)
     {
         int answer = 0;
         int a = 5; //장군개미 공격력
         int b = 3; //병정개미 공격력
         int c = 1; //일개미 공격력
-        
+
         int aCount = hp / a;
         hp = hp % a;
 
-        int bCount =  hp / b;
+        int bCount = hp / b;
         hp = hp % b;
 
         //int cCount = hp / c;

@@ -1,10 +1,37 @@
+//#define Test_ENV
+//#define PROD_ENV
 using System.Collections;
 using System.Diagnostics;
 using System.Reflection.Metadata;
 using System.Text;
 
+
+
 class CSstudy
 {
+    #region public methods
+    public void Run(){}
+    
+    public void Create() { }
+    #endregion Public  vethods
+
+    public void PreProTest()
+    {
+        bool verbose = false;
+#if (TEST_ENV)
+        Console.WriteLine("Now test env.");
+        verbose = true;
+#elif(PROD_ENV)
+        Console.WriteLine("Now prod env.");
+#else
+        Console.WriteLine("???");
+#endif
+        if (verbose)
+        {
+            Console.WriteLine("Verbose...");
+        }
+    }
+
 
     class MyLesson
     {
@@ -12,12 +39,12 @@ class CSstudy
 
         public void RunEvent()
         {
-            if(Run != null)
+            if (Run != null)
             {
                 Run(this, EventArgs.Empty);
             }
         }
-        
+
     }
 
     public void EventTest()
@@ -114,7 +141,7 @@ class CSstudy
 
     public void Method1(int age, int score, string name = "Name")
     {
-        
+
     }
 
     public double GetData(ref int a, ref double b)
@@ -171,7 +198,7 @@ class CSstudy
         mc.Name = "Kim";
         mc.Age = 20;
         //mc.SetAge(-23);
-        
+
         Console.WriteLine(mc.GetcustomerData());
         Console.WriteLine(mc.CalAge(30));
     }
@@ -222,9 +249,9 @@ class CSstudy
 
     string GetName() { return ""; }
     static public int GetId() { return 0; }
-    public static int GetId2(){ return 0; }
+    public static int GetId2() { return 0; }
 
-     [Flags]
+    [Flags]
     enum Border
     {
         None = 0,
@@ -263,9 +290,9 @@ class CSstudy
 
         // OR 연산자로 다중 플래그 할당
         Border b = Border.Top | Border.Bottom;
-        
+
         // & 연산자로 플래그 체크 
-        if  ((b & Border.Top) != 0)
+        if ((b & Border.Top) != 0)
         {
             // hasFlag()이용 플래그 체크
             if (b.HasFlag(Border.Bottom))
@@ -492,9 +519,9 @@ class CSstudy
         Console.WriteLine(val);
         Console.WriteLine(myList[0]);
 
-    
+
     }
-    
+
 
     public void AraayExample()
     {

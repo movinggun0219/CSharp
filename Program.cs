@@ -15,7 +15,7 @@ internal class Program
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.Solution08062(24));
+        Console.WriteLine(sol.Solution08072("250"));
         //PrintIntarray(sol.soulution0804(10));
         //Util.PrintIntarray(sol.solution07282(strs));
         //sol.Soulution0731();
@@ -23,9 +23,10 @@ internal class Program
         CSstudy study = new CSstudy();
         //study.CheckInput(1,2.0,null,true );
         //sol.Solution0806();
-        
+
         //study.EventTest();
         //study.StandardNumericFormatString();
+        //study.PreProTest();
     }
 
 
