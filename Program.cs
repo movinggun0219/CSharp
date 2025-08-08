@@ -8,28 +8,33 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] { 9, -1, 0 };
+        var intArray = new int[] { 10,8,6};
         var strs = new string[] { "a", "b", "c" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
 
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.Solution08072("250"));
-        //PrintIntarray(sol.soulution0804(10));
+        //Console.WriteLine(sol.solution08082("hi12392"));
+        PrintIntarray(sol.solution08082("hi12392"));
         //Util.PrintIntarray(sol.solution07282(strs));
         //sol.Soulution0731();
 
         CSstudy study = new CSstudy();
         //study.CheckInput(1,2.0,null,true );
-        //sol.Solution0806();
+       
 
-        //study.EventTest();
-        //study.StandardNumericFormatString();
-        //study.PreProTest();
+        // CSstudy.MyClass cls = new CSstudy.MyClass();
+        // cls[1] = 1024;
+        // int i = cls[1];
+        // Console.WriteLine(i);
+        // cls.SetData(3, 100);
+        // int i2 = cls.GetData(3);
+        // Console.WriteLine(i2);
+        
     }
 
-
+    
     static IEnumerable<int> GetNumber()
     {
         yield return 10;

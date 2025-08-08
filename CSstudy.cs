@@ -9,6 +9,64 @@ using System.Text;
 
 class CSstudy
 {
+
+
+    public class MyClass
+    {
+        private const int MAX = 10;
+        private string name;
+
+        private int[] data = new int[MAX];
+
+        // indexer
+        public int this[int index]
+        {
+            get
+            {
+                if (index < 0 || index >= MAX)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                else
+                {
+                    return data[index];
+                }
+
+            }
+            set
+            {
+                if (!(index < 0 || index >= MAX))
+                {
+                    // 정수배열에 값 저장
+                    data[index] = value;
+                }
+            }
+        }
+
+        public void SetData(int index, int value)
+        {
+            if (index > 0 && index < MAX)
+            {
+                data[index] = value;
+            }
+        }
+        public int GetData(int index)
+        {
+            if (index >= 0 && index < MAX)
+            {
+                return data[index];
+            }
+            else
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+        }
+       
+
+    }
+
+
     #region public methods
     public void Run(){}
     

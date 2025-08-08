@@ -3,6 +3,37 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int[] solution08082(string my_string)
+    {
+       
+        var list = new List<int>();
+
+        foreach (var item in my_string)
+        {
+            // if ((item >= '0') && (item <= '9'))
+            // {
+            //     list.Add(item - '0');
+            // }
+
+            if (int.TryParse(item.ToString(), out var value))
+            {
+                list.Add(value);
+            }
+        }
+
+        list.Sort();
+        
+        return list.ToArray();
+    }
+    public int solution0808(int[] box, int n)
+    {
+        int answer = 0;
+
+        answer = (box[0] / n) * (box[1] / n); //* (box[2] / n);
+
+
+        return answer;
+    }
     public string Solution08072(string rsp)
     {
         // for (int i = 0; i < rsp.Length; i++)
@@ -24,7 +55,7 @@ class Solution
         const char rsp_rock = '0';
         const char rsp_scissors = '2';
         const char rsp_paper = '5';
-        
+
 
 
         var sb = new StringBuilder();
@@ -48,7 +79,8 @@ class Solution
                 Console.WriteLine("잘못입력됨");
             }
         }
-        
+
+
 
         return sb.ToString();
     }
