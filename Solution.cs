@@ -3,9 +3,50 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int solution08112(int[] numbers)
+    {
+        int answer = 0;
+
+        // for (int i = 0; i < numbers.Length - 1; i++)
+        // {
+        //     for (int j = i + 1; j < numbers.Length; j++)
+        //     {
+        //         int max = numbers[i] * numbers[j];
+        //         if (answer < max)
+        //         {
+        //             answer = max;
+        //         }
+        //     }
+        // }
+
+       Array.Sort(numbers); // 오름차순 정렬
+
+        int maxProduct = numbers[numbers.Length - 1] * numbers[numbers.Length - 2]; // 가장 큰 두 수
+        int minProduct = numbers[0] * numbers[1]; // 가장 작은 두 수 (음수일 수 있음)
+
+        return Math.Max(maxProduct, minProduct); // 둘 중 더 큰 값 반환
+    }
+    public int solution0811(string my_string)
+    {
+        int answer = 0;
+
+        foreach (var item in my_string)
+        {
+            // if (item >= '1' && item <= '9')
+            // {
+            //     answer += (item - '0');
+            // }
+            if (int.TryParse(item.ToString(),out var value))
+            {
+                answer += value;
+            }
+        }
+        return answer;
+    }
+
     public int[] solution08082(string my_string)
     {
-       
+
         var list = new List<int>();
 
         foreach (var item in my_string)
@@ -22,7 +63,7 @@ class Solution
         }
 
         list.Sort();
-        
+
         return list.ToArray();
     }
     public int solution0808(int[] box, int n)

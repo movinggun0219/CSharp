@@ -62,8 +62,12 @@ class CSstudy
             }
 
         }
-       
 
+        int id = 0;
+        public string Name { get; set; }
+        public void Run(int id) { }
+        protected void Excute() { }
+        
     }
 
 
