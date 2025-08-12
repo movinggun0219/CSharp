@@ -3,9 +3,52 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    /// <summary>
+    /// 홀짝구분하기
+    /// </summary>
+    public void solution08122()
+    {
+        String[] s;
+
+        Console.Clear();
+        s = Console.ReadLine().Split(' ');
+
+        int a = Int32.Parse(s[0]);
+
+        const string str = "{0} is {1}";
+        const string strEven = "even";
+        const string strOdd = "odd";
+        string strVal = (a%2 ==0) ? strEven : strOdd;
+        Console.WriteLine(str, a, strVal);
+
+        // if (a % 2 == 0)
+        // {
+        //     Console.WriteLine($"{a} is even");
+        // }
+
+        // else
+        // {
+        //     Console.WriteLine($"{a} is odd");
+        // }
+
+    }
+    public string solution0812(string my_string, int k)
+    {
+        //string answer = "";
+        var sb = new StringBuilder();
+
+
+        for (int i = 0; i < k; i++)
+        {
+            //answer += my_string;
+            sb.Append(my_string);
+        }
+
+        return sb.ToString();
+    }
     public int solution08112(int[] numbers)
     {
-        int answer = 0;
+        //int answer = 0;
 
         // for (int i = 0; i < numbers.Length - 1; i++)
         // {
@@ -19,7 +62,7 @@ class Solution
         //     }
         // }
 
-       Array.Sort(numbers); // 오름차순 정렬
+        Array.Sort(numbers); // 오름차순 정렬
 
         int maxProduct = numbers[numbers.Length - 1] * numbers[numbers.Length - 2]; // 가장 큰 두 수
         int minProduct = numbers[0] * numbers[1]; // 가장 작은 두 수 (음수일 수 있음)
@@ -154,7 +197,7 @@ class Solution
         int answer = 0;
         int a = 5; //장군개미 공격력
         int b = 3; //병정개미 공격력
-        int c = 1; //일개미 공격력
+        //int c = 1; //일개미 공격력
 
         int aCount = hp / a;
         hp = hp % a;
