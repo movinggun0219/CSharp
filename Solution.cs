@@ -3,6 +3,55 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public string solution08132(string cipher, int code)
+    {
+
+        var sb = new StringBuilder();
+
+        
+
+        for (int i = code - 1; i < cipher.Length; i+=code)
+        {
+            sb.Append(cipher[i]);
+        }
+
+        return sb.ToString();
+
+        /*
+        string answer = "";
+        int index = 0;
+        foreach (var item in cipher)
+        {
+            if (index % code == code - 1)
+            {
+                answer += item.ToString();
+            }
+            index++;
+        }
+
+        return answer;
+        */
+    }
+    public int[] solution0813(int[] num_list, int n)
+    {
+        int len = num_list.Length - (n - 1);
+        int[] answer = new int[len];
+
+        // for (int i = 0; i < len; i++)
+        // {
+        //     answer[i] = num_list[n-1];
+        //     n++;
+        // }
+
+        for (int i = n - 1, j = 0; i < num_list.Length; i++, j++)
+        {
+            answer[j] = num_list[i];
+        }
+
+
+        return answer;
+    }
+
     /// <summary>
     /// 홀짝구분하기
     /// </summary>
@@ -18,7 +67,7 @@ class Solution
         const string str = "{0} is {1}";
         const string strEven = "even";
         const string strOdd = "odd";
-        string strVal = (a%2 ==0) ? strEven : strOdd;
+        string strVal = (a % 2 == 0) ? strEven : strOdd;
         Console.WriteLine(str, a, strVal);
 
         // if (a % 2 == 0)

@@ -8,21 +8,24 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] {1, 2, -3, 4, -5 };
-        var strs = new string[] { "a", "b", "c" };
+        var intArray = new int[] { 5,2,1,7,5};
+        var strs = new string[] { "dfjardstddetckdaccccdegk" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
 
         Solution sol = new Solution();
 
 
-        //Console.WriteLine(sol.solution0812("string",3));
-        //PrintIntarray(sol.solution08082("hi12392"));
+        Console.WriteLine(sol.solution08132("pfqallllabwaoclk",2));
+        //PrintIntarray(sol.solution0813(intArray,2));
         //Util.PrintIntarray(sol.solution07282(strs));
-        sol.solution08122();
+        //sol.solution08122();
 
         CSstudy study = new CSstudy();
         //study.CheckInput(1,2.0,null,true );
         //study.ClassSample();
+
+        Client client = new Client();
+        //client.Test();
         
     }
 
