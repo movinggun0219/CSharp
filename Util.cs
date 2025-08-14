@@ -45,6 +45,24 @@ namespace Ohoh
         }
 
         /// <summary>
+        /// 배열을 출력시키는 함수
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="answerArray"></param>
+        public static void PrintArray<T>(T[] answerArray)
+        {
+            Console.Write("[");
+            for (int i = 0; i < answerArray.Length; i++)
+            {
+                Console.Write($"{answerArray[i]}");
+                if (i != answerArray.Length - 1)
+                {
+                    Console.Write(", ");
+                }
+            }
+            Console.Write("]");
+        }
+        /// <summary>
         /// 정수 배열의 합을 구하기
         /// </summary>
         /// <param name="scoresArray"></param>

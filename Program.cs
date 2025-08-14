@@ -8,16 +8,16 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] { 5,2,1,7,5};
+        var intArray = new int[] { 5, 2, 1, 7, 5 };
         var strs = new string[] { "dfjardstddetckdaccccdegk" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
 
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution08132("pfqallllabwaoclk",2));
-        //PrintIntarray(sol.solution0813(intArray,2));
-        //Util.PrintIntarray(sol.solution07282(strs));
+        Console.WriteLine(sol.solution08142("cccCCC"));
+        //PrintIntarray(sol.solution08142("cccCCC"));
+        //Util.PrintArray(sol.solution0814(-4,7,true));
         //sol.solution08122();
 
         CSstudy study = new CSstudy();
@@ -26,7 +26,8 @@ internal class Program
 
         Client client = new Client();
         //client.Test();
-        
+        //study.GenericSample();
+
     }
 
     

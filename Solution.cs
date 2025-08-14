@@ -3,14 +3,66 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public string solution08142(string my_string)
+    {
+        var sb = new StringBuilder();
+
+        foreach (var item in my_string)
+        {
+            if (item >='a' && item <= 'z')
+            {
+                sb.Append(item.ToString().ToUpper());
+            }
+
+            else
+            {
+                sb.Append(item.ToString().ToLower());
+            }
+        }
+
+         foreach (var item in my_string)
+        {
+            // 소문자면 대문자로
+            if (char.IsLower(item))
+            {
+                sb.Append(char.ToUpper(item));
+            }
+            // 그 외 (대문자 등)는 소문자로
+            else
+            {
+                sb.Append(char.ToLower(item));
+            }
+        }
+
+        return sb.ToString();
+    }
+    public int solution0814(int a, int b, bool flag)
+    {
+        int answer = 0;
+
+        // if (flag)
+        // {
+        //     answer = a + b;
+        // }
+        // else
+        // {
+        //     answer = a - b;
+        // }
+        // return answer;
+
+        answer = flag ? a + b : a - b;
+
+        return answer;
+    }
+
     public string solution08132(string cipher, int code)
     {
 
         var sb = new StringBuilder();
 
-        
 
-        for (int i = code - 1; i < cipher.Length; i+=code)
+
+        for (int i = code - 1; i < cipher.Length; i += code)
         {
             sb.Append(cipher[i]);
         }

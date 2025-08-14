@@ -9,10 +9,42 @@ using System.Text;
 
 class CSstudy
 {
-
+    class MyStack<T>
+    {
+        T[] _elements;
+        int pos = 0;
+        public int Pos
+        {
+            get{ return pos; }
+        }
+        public MyStack()
+        {
+            _elements = new T[100];
+        }
+        public void Push(T element)
+        {
+            _elements[++pos] = element;
+        }
+        public T Pop()
+        {
+            return _elements[pos--];
+        }
+    }
+    public void GenericSample()
+    {
+        MyStack<int> numberStack = new MyStack<int>();
+        //MyStack<string> nameStack = new MyStack<string>();
+        var nameStack = new MyStack<string>();
+        numberStack.Push(14);
+        numberStack.Push(20);
+        numberStack.Push(5);
+        Console.WriteLine($"pop: {numberStack.Pop()}, pos: {numberStack.Pos}");
+        nameStack.Push("thrusday");
+        Console.WriteLine(nameStack.Pop());
+    }    
     public void ClassSample()
     {
-        
+
         Console.WriteLine("class Test");
         Animal anione = new Animal();
         anione.Name = "cat";
@@ -29,7 +61,7 @@ class CSstudy
         Bird mybird = new Bird();
         mybird.Name = "seossi";
         mybird.Fly();
-        
+
         // 이건 안됨
         //PureBase pb = new PureBase();
 
