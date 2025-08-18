@@ -8,16 +8,17 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] { 5, 2, 1, 7, 5 };
+        var intArray = new int[] { 24 };
         var strs = new string[] { "dfjardstddetckdaccccdegk" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
-
+        
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution08142("cccCCC"));
-        //PrintIntarray(sol.solution08142("cccCCC"));
-        //Util.PrintArray(sol.solution0814(-4,7,true));
+        //Console.WriteLine(sol.solution0818("I love you",3,6));
+        PrintIntarray(sol.solution08182(29));
+        //Util.PrintIntarray(sol.solution08142(24));
+        
         //sol.solution08122();
 
         CSstudy study = new CSstudy();
@@ -28,6 +29,17 @@ internal class Program
         //client.Test();
         //study.GenericSample();
 
+        // InterfaceSample oh = new InterfaceSample();
+        // oh.sample();
+
+        //ILogger logger = new ConsoleLogger();
+        //logger.WriteLog("반가워");
+        //ILogger logger = new FileLogger("MyText.text");
+
+        //ClimateMonitor monitor = new ClimateMonitor(logger);
+        //monitor.Start();
+
+        
     }
 
     

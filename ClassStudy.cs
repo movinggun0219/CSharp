@@ -1,3 +1,96 @@
+
+class ClimateMonitor
+{
+    ILogger logger;
+    public ClimateMonitor(ILogger inlogger)
+    {
+        logger = inlogger;
+    }
+
+    public void Start()
+    {
+        while (true)
+        {
+            Console.Write("온도를 입력해주세요 : ");
+            string tem = Console.ReadLine();
+            if (tem == "")
+                break;
+
+            logger.WriteLog($"현재 온도 : {tem}");
+        }
+    }
+}
+
+interface ILogger       // C#에서는 인터페이스명 첫 글자에 'I'를 붙이는 것이 암묵적인 룰이다.
+{
+    void WriteLog(string message);
+}
+public class FileLogger : ILogger
+{
+    StreamWriter writer;
+    public FileLogger(string path)
+    {
+        writer = File.CreateText(path);
+        writer.AutoFlush = true;
+    }
+    public void WriteLog(string message)
+    {
+        writer.WriteLine($"{DateTime.Now.ToShortTimeString}{message}");
+    }
+}
+class ConsoleLogger : ILogger
+{
+    public void WriteLog(string message)
+    {
+        Console.WriteLine("{0} {1}", DateTime.Now.ToLocalTime(), message);
+    }
+}
+public interface Icomparable
+{
+    // 멤버 앞에 접근 제한자 사용안함 (인터페이스 멤버는 자동으로 public이기 때문)
+    int CompareTo(object obj);
+
+    void Open();
+    void Close();
+}
+
+public class MyClass2 : Icomparable
+{
+    public int CompareTo(object obj)
+    {
+        return 0;
+    }
+
+    public void Open()
+    {
+
+    }
+
+    public void Close()
+    {
+
+    }
+}
+
+
+
+public class InterfaceSample
+{
+    public void sample()
+    {
+        //Icomparable ic = new Icomparable();  // 이건 에러
+        Icomparable ic = new MyClass2();
+        ic.Open();
+        ic.Close();
+
+        MyClass2 mc2 = new MyClass2();
+        mc2.Open();
+        mc2.Close();
+    }
+}
+
+
+
 // static 클래스 정의
 public static class MyUtility
 {

@@ -3,13 +3,68 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int[] solution08182(int n)
+    {
+        var list = new List<int>();
+
+        for (int i = 1; i <= n; i++)
+        {
+            if (n % i == 0)
+            {
+                list.Add(i);
+            }    
+        }
+        return list.ToArray();
+    }
+
+    /// <summary>
+    /// 인덱스바꾸기
+    /// </summary>
+    /// <param name="my_string"></param>
+    /// <param name="num1"></param>
+    /// <param name="num2"></param>
+    /// <returns></returns>
+    public string solution0818(string my_string, int num1, int num2)
+    {
+        /*
+        string answer = "";
+        char chr1 = my_string[num1];
+        char chr2 = my_string[num2];
+
+
+        for (int i = 0; i < my_string.Length; i++)
+        {
+            if (i == num1)
+            {
+                answer += chr2;
+            }
+            else if (i == num2)
+            {
+                answer += chr1;
+            }
+            else
+            {
+                answer += my_string[i];
+            }
+        }
+        
+        return answer;
+        */
+
+        var sb = new StringBuilder(my_string);
+        sb[num1] = my_string[num2];
+        sb[num2] = my_string[num1];
+
+        return sb.ToString();
+
+    }
     public string solution08142(string my_string)
     {
         var sb = new StringBuilder();
 
         foreach (var item in my_string)
         {
-            if (item >='a' && item <= 'z')
+            if (item >= 'a' && item <= 'z')
             {
                 sb.Append(item.ToString().ToUpper());
             }
@@ -20,7 +75,7 @@ class Solution
             }
         }
 
-         foreach (var item in my_string)
+        foreach (var item in my_string)
         {
             // 소문자면 대문자로
             if (char.IsLower(item))
