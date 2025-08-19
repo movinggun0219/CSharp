@@ -3,6 +3,60 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public string solution08192(string my_string)
+    {
+        /*
+        string answer = "";
+
+        var list = new List<string>();
+        foreach (var item in my_string)
+        {
+            list.Add(item.ToString().ToLower());
+        }
+        list.Sort();
+
+        foreach (var item in list)
+        {
+            answer += item;
+        }
+        return answer;
+        */
+
+        char[] chrarr = my_string.ToLower().ToCharArray();
+        Array.Sort(chrarr);
+        return new string(chrarr);
+        
+    }
+
+    public int[] solution0819(int[] array)
+    {
+
+        int[] answer = new int[2];
+
+        /*
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] > answer[0])
+            {
+                answer[0] = array[i];
+                answer[1] = i;
+            }
+        }
+        */
+        var dic = new Dictionary<int, int>(); // 
+        var list = new List<int>(array);
+
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            dic.Add(array[i], i);
+        }
+        list.Sort();
+        answer[0] = list[list.Count - 1];
+        answer[1] = dic[answer[0]];
+
+        return answer;
+    }
     public int[] solution08182(int n)
     {
         var list = new List<int>();
@@ -12,7 +66,7 @@ class Solution
             if (n % i == 0)
             {
                 list.Add(i);
-            }    
+            }
         }
         return list.ToArray();
     }

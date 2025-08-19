@@ -8,22 +8,23 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] { 24 };
-        var strs = new string[] { "dfjardstddetckdaccccdegk" };
+        var intArray = new int[] { 1, 8, 3};
+        var strs = new string[] { "Bcad" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
         
         Solution sol = new Solution();
 
 
-        //Console.WriteLine(sol.solution0818("I love you",3,6));
-        PrintIntarray(sol.solution08182(29));
-        //Util.PrintIntarray(sol.solution08142(24));
+        Console.WriteLine(sol.solution08192("Python"));
+        //PrintIntarray(sol.solution0819(intArray));
+        //Util.PrintIntarray(sol.solution0819(intArray));
         
         //sol.solution08122();
 
         CSstudy study = new CSstudy();
         //study.CheckInput(1,2.0,null,true );
         //study.ClassSample();
+        //study.DeleTest();
 
         Client client = new Client();
         //client.Test();

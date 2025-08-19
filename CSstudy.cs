@@ -6,16 +6,36 @@ using System.Reflection.Metadata;
 using System.Text;
 
 
-
 class CSstudy
 {
+    // delegate 정의
+    delegate int MyDelegate(string s);
+    public void DeleTest()
+    {
+        // delegate 객체 생성
+        MyDelegate m = new MyDelegate(stringToInt);
+        // delegate 객체를 메서드로 전달
+        DeleRun(m);
+    }
+
+    // delegate 대상이 되는 메서드
+    int stringToInt(string s)
+    {
+        return int.Parse(s);
+    }
+
+    void DeleRun(MyDelegate m)
+    {
+        int i = m("123"); // m.invoke("123");
+        Console.WriteLine(i);
+    }
     class MyStack<T>
     {
         T[] _elements;
         int pos = 0;
         public int Pos
         {
-            get{ return pos; }
+            get { return pos; }
         }
         public MyStack()
         {
@@ -41,7 +61,7 @@ class CSstudy
         Console.WriteLine($"pop: {numberStack.Pop()}, pos: {numberStack.Pos}");
         nameStack.Push("thrusday");
         Console.WriteLine(nameStack.Pop());
-    }    
+    }
     public void ClassSample()
     {
 
@@ -133,8 +153,8 @@ class CSstudy
 
 
     #region public methods
-    public void Run(){}
-    
+    public void Run() { }
+
     public void Create() { }
     #endregion Public  vethods
 
