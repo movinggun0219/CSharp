@@ -3,6 +3,52 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int solution08202(int[] numbers, int n)
+    {
+        int answer = 0;
+
+        foreach (var item in numbers)
+        {
+            answer += item;
+            if (answer >= n)
+            {
+                break;
+            }
+        }
+
+        if (answer < n)
+        {
+            answer = -1;
+        }
+        
+        return answer;
+    }
+    public string solution0820(string my_string, int n)
+    {
+        string answer = "";
+        //string answer = my_string.Substring(my_string.Length-n,n);
+        //return my_string.Remove(0, my_string.Length - n);
+
+        for (int i = my_string.Length - n; i < my_string.Length; i++)
+        {
+            answer += my_string[i];
+        }
+
+        // for (int i = 0; i < my_string.Length; i++)
+        // {
+        //     if (i<my_string.Length - n)
+        //     {
+        //         continue;
+        //     }
+        //     else
+        //     {
+        //         answer += my_string[i];
+        //     }
+        // }
+
+        return answer;
+    }
+
     public string solution08192(string my_string)
     {
         /*
@@ -25,7 +71,7 @@ class Solution
         char[] chrarr = my_string.ToLower().ToCharArray();
         Array.Sort(chrarr);
         return new string(chrarr);
-        
+
     }
 
     public int[] solution0819(int[] array)

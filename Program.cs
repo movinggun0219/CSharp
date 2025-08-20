@@ -8,38 +8,26 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] { 1, 8, 3};
+        var intArray = new int[] { 34, 5, 71, 29, 100, 34 };
         var strs = new string[] { "Bcad" };
         var strs2 = new string[] { "com", "b", "d", "p", "c" };
-        
+
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution08192("Python"));
+        Console.WriteLine(sol.solution08202(intArray,123));
         //PrintIntarray(sol.solution0819(intArray));
         //Util.PrintIntarray(sol.solution0819(intArray));
-        
+
         //sol.solution08122();
 
         CSstudy study = new CSstudy();
         //study.CheckInput(1,2.0,null,true );
         //study.ClassSample();
-        //study.DeleTest();
 
-        Client client = new Client();
-        //client.Test();
-        //study.GenericSample();
-
-        // InterfaceSample oh = new InterfaceSample();
-        // oh.sample();
-
-        //ILogger logger = new ConsoleLogger();
-        //logger.WriteLog("반가워");
-        //ILogger logger = new FileLogger("MyText.text");
-
-        //ClimateMonitor monitor = new ClimateMonitor(logger);
-        //monitor.Start();
-
+        
+        //Util.Sort(intArray, Util.AscendingCompare);
+        //Util.PrintArray(intArray);
         
     }
 
