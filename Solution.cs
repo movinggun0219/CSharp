@@ -3,6 +3,31 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+        public int[] solution08212(int[] num_list, int n)
+    {
+        int len = num_list.Length;
+        int[] answer = new int[len];
+
+        for (int i = 0; i < len; i++)
+        {
+            answer[i] = num_list[(i + n) % len];
+        }
+                
+        return answer;
+    }
+
+    public int solution0821(int[] num_list)
+    {
+        for (int i = 0; i < num_list.Length; i++)
+        {
+            if (num_list[i] < 0)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public int solution08202(int[] numbers, int n)
     {
         int answer = 0;
@@ -20,7 +45,7 @@ class Solution
         {
             answer = -1;
         }
-        
+
         return answer;
     }
     public string solution0820(string my_string, int n)

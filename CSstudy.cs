@@ -6,9 +6,51 @@ using System.Reflection.Metadata;
 using System.Text;
 using Ohoh;
 
+//Forms를 사용하려면 csproj 파일에  <itemgroup> 추가 필요
+using System.Windows.Forms;
+
+
 class CSstudy
 {
-   
+
+    class MyArea : Form
+    {
+        public MyArea()  // using System.Windows.Forms; 필요
+        {
+            this.MouseClick += delegate { MyAreaClicked(); };
+        }
+
+        public delegate void ClickDelegate(object sender);
+        public ClickDelegate MyClick;
+
+        void MyAreaClicked()
+        {
+            if (MyClick != null)
+            {
+                MyClick(this);
+            }
+        }
+    }
+
+    MyArea area;
+    public void TestMyArea()
+    {
+        area = new MyArea();
+        area.MyClick += Area_Click;
+        area.MyClick += AfterClick;
+        
+        area.ShowDialog();
+    }
+    void Area_Click(object sender)
+    {
+        area.Text += " MyArea 클릭! ";
+    }
+    void AfterClick(object sender)
+    {
+        area.Text += " Afterclick 클릭!";
+    }
+
+
     public void CompareRun()
     {
         int[] a = { 5, 53, 3, 7, 1 };
@@ -16,7 +58,7 @@ class CSstudy
         // 올림차순으로 정렬 
         Util.CompareDelegate compDele = Util.AscendingCompare;
         Util.Sort(a, compDele);
-        
+
         // 내림차순으로 정렬 
 
         compDele = Util.DescendingCompater;
