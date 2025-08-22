@@ -17,7 +17,7 @@ internal class Program
 
         //Console.WriteLine(sol.solution0821(intArray));
         //PrintIntarray(sol.solution0819(intArray));
-        Util.PrintIntarray(sol.solution08212(intArray,3));
+        Util.PrintIntarray(sol.solution08222(15,5));
 
         //sol.solution08122();
 

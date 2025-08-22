@@ -3,6 +3,46 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int[] solution08222(int n, int k)
+    {
+        var list = new List<int>();
+        
+        for (int i = 1,j = i*k ; j <= n; i++,j =i*k)
+        {
+            list.Add(j);
+        }
+
+        return list.ToArray();
+
+
+    }
+
+    public int[] solution0822(int start_num, int end_num)
+    {
+
+        int len = start_num - end_num + 1;
+        int[] answer = new int[len];
+
+        for (int i = 0; i < len; i++)
+        {
+            answer[i] = start_num - i;
+        }
+
+        return answer;
+
+
+        /*
+        var list = new List<int>();
+        
+        for (int i = start_num; i >= end_num; i--)
+        {
+            list.Add(i);
+        }
+
+        return list.ToArray();
+        */
+    }
+
         public int[] solution08212(int[] num_list, int n)
     {
         int len = num_list.Length;
@@ -12,7 +52,7 @@ class Solution
         {
             answer[i] = num_list[(i + n) % len];
         }
-                
+
         return answer;
     }
 

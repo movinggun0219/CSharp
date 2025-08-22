@@ -21,7 +21,9 @@ class CSstudy
         }
 
         public delegate void ClickDelegate(object sender);
-        public ClickDelegate MyClick;
+        
+        //event 필드 
+        public event ClickDelegate MyClick;
 
         void MyAreaClicked()
         {
@@ -33,12 +35,19 @@ class CSstudy
     }
 
     MyArea area;
+
     public void TestMyArea()
     {
         area = new MyArea();
+        
         area.MyClick += Area_Click;
         area.MyClick += AfterClick;
-        
+        area.MyClick -= Area_Click;
+
+        // event 일때 사용 불가
+        //area.MyClick(null);
+        //area.MyClick = Area_Click;
+
         area.ShowDialog();
     }
     void Area_Click(object sender)
