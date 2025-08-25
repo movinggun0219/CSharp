@@ -3,6 +3,42 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int solution08252(string my_string, string is_prefix)
+    {
+        int answer = 1;
+
+        if (is_prefix.Length > my_string.Length)
+        {
+            return 0;
+        }
+
+        for (int i = 0; i < is_prefix.Length; i++)
+        {
+            if (my_string[i] != is_prefix[i])
+            {
+                return 0;
+            }
+        }
+
+        return my_string.IndexOf(is_prefix) == 0 ? 1 : 0;
+        return answer;
+    }
+    /// <summary>
+    /// 더 크게 합치기
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <returns></returns>
+    public int solution0825(int a, int b)
+    {
+        string ab = $"{a}{b}";
+        string ba = $"{b}{a}";
+        int iab = int.Parse(ab);
+        int iba = Convert.ToInt32(ba);
+        int answer = Math.Max(iab, iba);
+
+        return answer;
+    }
     public int[] solution08222(int n, int k)
     {
         var list = new List<int>();

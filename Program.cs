@@ -9,15 +9,15 @@ internal class Program
     private static void Main(string[] args)
     {
         var intArray = new int[] {5, 2, 1, 7, 5} ;
-        var strs = new string[] { "Bcad" };
-        var strs2 = new string[] { "com", "b", "d", "p", "c" };
+        var strs = new string[] { "banana"};
+        var strs2 = new string[] { "ban"};
 
         Solution sol = new Solution();
 
 
-        //Console.WriteLine(sol.solution0821(intArray));
+        Console.WriteLine(sol.solution08252("banana","nan"));
         //PrintIntarray(sol.solution0819(intArray));
-        Util.PrintIntarray(sol.solution08222(15,5));
+        //Util.PrintIntarray(sol.solution08222(15,5));
 
         //sol.solution08122();
 
