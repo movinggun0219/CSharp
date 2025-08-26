@@ -3,6 +3,20 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public string solution08262(string[] my_strings, int[,] parts)
+    {
+        string answer = "";
+        int cnt = parts.GetLength(0);
+
+
+        for (int i = 0; i < cnt; i++)
+        {
+            int len = parts[i, 1] - parts[i, 0] + 1;
+            answer += my_strings[i].Substring(parts[i, 0], len);
+        }
+
+        return answer;
+    }
     public int solution08252(string my_string, string is_prefix)
     {
         int answer = 1;

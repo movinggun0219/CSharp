@@ -9,13 +9,14 @@ internal class Program
     private static void Main(string[] args)
     {
         var intArray = new int[] {5, 2, 1, 7, 5} ;
-        var strs = new string[] { "banana"};
-        var strs2 = new string[] { "ban"};
+        var int2Arr = new int[,] { { 0, 4 }, { 1, 2 }, { 3, 5 }, { 7, 7 } };
+        var strs = new string[] { "progressive", "hamburger", "hammer", "ahocorasick"};
+        var strs2 = new string[] { "asdf"};
 
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution08252("banana","nan"));
+        Console.WriteLine(sol.solution08262(strs,int2Arr));
         //PrintIntarray(sol.solution0819(intArray));
         //Util.PrintIntarray(sol.solution08222(15,5));
 
