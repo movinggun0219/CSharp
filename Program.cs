@@ -16,9 +16,9 @@ internal class Program
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution08262(strs,int2Arr));
+        //Console.WriteLine(sol.solution08262(strs,int2Arr));
         //PrintIntarray(sol.solution0819(intArray));
-        //Util.PrintIntarray(sol.solution08222(15,5));
+        Util.PrintIntarray(sol.solution08272(25));
 
         //sol.solution08122();
 

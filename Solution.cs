@@ -3,6 +3,27 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int[] solution08272(int n) 
+    {        
+        var list = new List<int>();
+        while (n != 1)
+        {
+            list.Add(n);
+            if (n % 2 == 0)
+            {
+                n /= 2;
+            }
+            else
+            {
+                n = 3 * n + 1;
+            }
+            
+        }
+        list.Add(1);
+        return list.ToArray();
+    }
+
+
     public string solution08262(string[] my_strings, int[,] parts)
     {
         string answer = "";
