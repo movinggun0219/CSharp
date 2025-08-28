@@ -17,7 +17,8 @@ class CSstudy
     {
         public MyArea()  // using System.Windows.Forms; 필요
         {
-            this.MouseClick += delegate { MyAreaClicked(); };
+            //this.MouseClick += delegate { MyAreaClicked(); };
+            MouseClick += (s, e) => MyAreaClicked();
         }
 
         public delegate void ClickDelegate(object sender);
@@ -47,6 +48,8 @@ class CSstudy
         // event 일때 사용 불가
         //area.MyClick(null);
         //area.MyClick = Area_Click;
+
+        area.Click += (s, a) => MessageBox.Show("OK");
 
         area.ShowDialog();
     }

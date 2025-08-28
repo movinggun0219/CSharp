@@ -8,7 +8,7 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] {5, 2, 1, 7, 5} ;
+        var intArray = new int[] {0, 1, 0, 10, 0, 1, 0, 10, 0, -1, -2, -1} ;
         var int2Arr = new int[,] { { 0, 4 }, { 1, 2 }, { 3, 5 }, { 7, 7 } };
         var strs = new string[] { "progressive", "hamburger", "hammer", "ahocorasick"};
         var strs2 = new string[] { "asdf"};
@@ -16,9 +16,9 @@ internal class Program
         Solution sol = new Solution();
 
 
-        //Console.WriteLine(sol.solution08262(strs,int2Arr));
+        Console.WriteLine(sol.solution08282(intArray));
         //PrintIntarray(sol.solution0819(intArray));
-        Util.PrintIntarray(sol.solution08272(25));
+        //Util.PrintIntarray(sol.solution08282(intArray));
 
         //sol.solution08122();
 

@@ -3,8 +3,51 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
-    public int[] solution08272(int n) 
-    {        
+    public string solution08282(int[] numLog)
+    {
+        var sb = new StringBuilder();
+
+        for (int i = 0; i < numLog.Length - 1; i++)
+        {
+            int a = numLog[i + 1] - numLog[i];
+
+            if (a == 1) sb.Append('w');
+            
+            else if (a == -1) sb.Append('s');
+            
+            else if (a == 10) sb.Append('d');
+            
+            else if (a == -10) sb.Append('a');
+            
+        }
+
+        return sb.ToString();
+    }
+
+    public int solution0828(int n, string control)
+    {
+
+
+        foreach (var item in control)
+        {
+            switch (item)
+            {
+                case 'w': n++; break;
+                case 's': n--; break;
+                case 'd': n += 10; break;
+                case 'a': n -= 10; break;
+                default:
+                    Console.WriteLine("Error!!");
+                    break;
+            }
+        }
+
+
+        return n;
+    }
+
+    public int[] solution08272(int n)
+    {
         var list = new List<int>();
         while (n != 1)
         {
@@ -17,7 +60,7 @@ class Solution
             {
                 n = 3 * n + 1;
             }
-            
+
         }
         list.Add(1);
         return list.ToArray();
