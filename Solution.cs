@@ -3,6 +3,24 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public int[] solution0829(int[] num_list)
+    {
+        var list = new List<int>(num_list);
+
+        int len = list.Count - 1;
+
+        if (list[len] < list[len - 1])
+        {
+            list.Add(list[len] * 2);
+        }
+        else if (list[len] > list[len - 1])
+        {
+            list.Add(list[len] - list[len - 1]);
+        }
+       
+            return list.ToArray();
+    }
+
     public string solution08282(int[] numLog)
     {
         var sb = new StringBuilder();
@@ -12,13 +30,13 @@ class Solution
             int a = numLog[i + 1] - numLog[i];
 
             if (a == 1) sb.Append('w');
-            
+
             else if (a == -1) sb.Append('s');
-            
+
             else if (a == 10) sb.Append('d');
-            
+
             else if (a == -10) sb.Append('a');
-            
+
         }
 
         return sb.ToString();

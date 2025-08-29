@@ -8,28 +8,29 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] {0, 1, 0, 10, 0, 1, 0, 10, 0, -1, -2, -1} ;
+        var intArray = new int[] {2, 1, 6};
         var int2Arr = new int[,] { { 0, 4 }, { 1, 2 }, { 3, 5 }, { 7, 7 } };
-        var strs = new string[] { "progressive", "hamburger", "hammer", "ahocorasick"};
-        var strs2 = new string[] { "asdf"};
+        var strs = new string[] { "progressive", "hamburger", "hammer", "ahocorasick" };
+        var strs2 = new string[] { "asdf" };
 
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution08282(intArray));
+        //Console.WriteLine(sol.solution08282(intArray));
         //PrintIntarray(sol.solution0819(intArray));
-        //Util.PrintIntarray(sol.solution08282(intArray));
+        Util.PrintIntarray(sol.solution0829(intArray));
 
         //sol.solution08122();
 
         CSstudy study = new CSstudy();
+        //study.AnoTypeTest();
         //study.CheckInput(1,2.0,null,true );
         //study.ClassSample();
         //study.TestMyArea();
-        
+
         //Util.Sort(intArray, Util.AscendingCompare);
         //Util.PrintArray(intArray);
-        
+
     }
 
     

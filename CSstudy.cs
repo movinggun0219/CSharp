@@ -12,6 +12,21 @@ using System.Windows.Forms;
 
 class CSstudy
 {
+    public void AnoTypeTest()
+    {
+        var v = new[] {
+            new{Name = "Lee", Age = 33, Phone = "01-111-1111"},
+            new{Name = "Kime", Age = 25, Phone = "02-222-2222"},
+            new{Name = "Park", Age = 37, Phone = "02-333-3333" }
+        };
+        var list = v.Where(p => p.Age >= 30)
+            .Select(p => new { p.Name, p.Age });
+
+        foreach (var item in list)
+        {
+            Debug.WriteLine($"{item.Name} {item.Age}");
+        }
+    }
 
     class MyArea : Form
     {
