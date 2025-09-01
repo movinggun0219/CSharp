@@ -1,4 +1,5 @@
 ﻿using System.Formats.Tar;
+using MyExtension;
 using Ohoh; // Utill을 사용하기 위해 필요한 namespace선언
 internal class Program
 {
@@ -8,7 +9,7 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] {2, 1, 6};
+        var intArray = new int[] { 2, 1, 6 };
         var int2Arr = new int[,] { { 0, 4 }, { 1, 2 }, { 3, 5 }, { 7, 7 } };
         var strs = new string[] { "progressive", "hamburger", "hammer", "ahocorasick" };
         var strs2 = new string[] { "asdf" };
@@ -18,8 +19,8 @@ internal class Program
 
         //Console.WriteLine(sol.solution08282(intArray));
         //PrintIntarray(sol.solution0819(intArray));
-        Util.PrintIntarray(sol.solution0829(intArray));
-
+        //Util.PrintIntarray(sol.solution0829(intArray));
+        sol.soulution09012();
         //sol.solution08122();
 
         CSstudy study = new CSstudy();
@@ -27,7 +28,7 @@ internal class Program
         //study.CheckInput(1,2.0,null,true );
         //study.ClassSample();
         //study.TestMyArea();
-
+        //study.ExtensionTest(); 
         //Util.Sort(intArray, Util.AscendingCompare);
         //Util.PrintArray(intArray);
 

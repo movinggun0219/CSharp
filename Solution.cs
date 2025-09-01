@@ -3,6 +3,31 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+    public void soulution09012()
+    {
+        String[] s;
+
+        Console.Clear();
+        s = Console.ReadLine().Split(' ');
+
+        int a = Int32.Parse(s[0]);
+        int b = Int32.Parse(s[1]);
+
+        
+        Console.WriteLine($"{a} + {b} = {a+b}");
+    }
+    public void solution0901()
+    {
+        String s;
+
+        Console.Clear();
+        s = Console.ReadLine();
+
+        foreach (var item in s)
+        {
+            Console.WriteLine($"{item}");
+        }
+    }
     public int[] solution0829(int[] num_list)
     {
         var list = new List<int>(num_list);
@@ -17,8 +42,8 @@ class Solution
         {
             list.Add(list[len] - list[len - 1]);
         }
-       
-            return list.ToArray();
+
+        return list.ToArray();
     }
 
     public string solution08282(int[] numLog)

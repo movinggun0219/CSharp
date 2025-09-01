@@ -5,13 +5,23 @@ using System.Diagnostics;
 using System.Reflection.Metadata;
 using System.Text;
 using Ohoh;
-
+using MyExtension; //Extension 불러오기
 //Forms를 사용하려면 csproj 파일에  <itemgroup> 추가 필요
 using System.Windows.Forms;
 
 
 class CSstudy
 {
+    /// <summary>
+    /// Extension 불러오기
+    /// </summary>
+    public void ExtensionTest()
+    {
+        string s = "This is a Test";
+        string s2 = s.ToChangeCase();
+        bool found = s.Found('z');
+        Console.WriteLine($"{s2} , found: {found}");
+    }
     public void AnoTypeTest()
     {
         var v = new[] {
