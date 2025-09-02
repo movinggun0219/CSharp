@@ -3,6 +3,49 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 class Solution
 {
+   
+    public int solution09022(int[] num_list)
+    {
+        int answer = 0;
+        string a = "";
+        string b = "";
+        foreach (var item in num_list)
+        {
+            if (item % 2 == 0) // 짝수
+            {
+                a += item.ToString();
+            }
+            else
+            {               
+                b += item.ToString();
+            }
+        }
+        
+        answer = Int32.Parse(a) + Convert.ToInt32(b);
+
+        return answer;
+    }
+
+    public string solution0902(string my_string, string alp)
+    {
+        //return my_string.Replace(alp, alp.ToUpper());
+        var sb = new StringBuilder();
+        foreach (var item in my_string)
+        {
+            if (item.ToString().Equals(alp))
+            {
+                //answer += alp.ToUpper();
+                sb.Append((char)(item - 'a' + 'A'));
+            }
+            else
+            {
+                sb.Append(item);
+            }
+        }
+
+        return sb.ToString();
+    }
+
     public void soulution09012()
     {
         String[] s;
@@ -13,8 +56,8 @@ class Solution
         int a = Int32.Parse(s[0]);
         int b = Int32.Parse(s[1]);
 
-        
-        Console.WriteLine($"{a} + {b} = {a+b}");
+
+        Console.WriteLine($"{a} + {b} = {a + b}");
     }
     public void solution0901()
     {

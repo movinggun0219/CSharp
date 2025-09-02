@@ -9,18 +9,18 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] { 2, 1, 6 };
+        var intArray = new int[] { 3, 4, 5, 2, 1 };
         var int2Arr = new int[,] { { 0, 4 }, { 1, 2 }, { 3, 5 }, { 7, 7 } };
-        var strs = new string[] { "progressive", "hamburger", "hammer", "ahocorasick" };
+        var strs = new string[] { "programmers" };
         var strs2 = new string[] { "asdf" };
 
         Solution sol = new Solution();
 
 
-        //Console.WriteLine(sol.solution08282(intArray));
+        Console.WriteLine(sol.solution09022(intArray));
         //PrintIntarray(sol.solution0819(intArray));
         //Util.PrintIntarray(sol.solution0829(intArray));
-        sol.soulution09012();
+        //sol.soulution09012();
         //sol.solution08122();
 
         CSstudy study = new CSstudy();
