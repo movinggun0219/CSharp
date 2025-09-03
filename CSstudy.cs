@@ -8,10 +8,62 @@ using Ohoh;
 using MyExtension; //Extension 불러오기
 //Forms를 사용하려면 csproj 파일에  <itemgroup> 추가 필요
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 
 class CSstudy
 {
+    /// <summary>
+    /// Regex에 대해
+    /// </summary>
+    public void RegexSample()
+    {
+        // Ex1. 첫 매치 문자열 출력
+        string str = "서울시 강남구 역삼동 강남아파트";
+        Regex regex = new Regex("강남");
+        //Match m = regex.Match(str);
+        MatchCollection mc = regex.Matches(str);
+
+        // if (m.Success)
+        // {
+        //     Console.WriteLine($"{m.Index}:{m.Value}");
+        // }
+
+        // while (m.Success)
+        // {
+        //     Console.WriteLine($"{m.Index}:{m.Value}");
+        //     m = m.NextMatch();
+        // }
+
+        foreach (Match m in mc)
+        {
+            Console.WriteLine($"{m.Index}:{m.Value}");
+        }
+
+        string name = "김공돌";
+        regex = new Regex(@"^[가-힣]{3}");
+        if (regex.IsMatch(name))
+        {
+            Console.WriteLine("Match");
+        }
+        else
+        {
+            Console.WriteLine("MissMatch");
+        }
+    }
+
+    /// <summary>
+    /// Partial 사용
+    /// </summary>
+    public void PartialTest()
+    {
+        class1 c1 = new class1();
+        c1.Get();
+        c1.Put();
+        c1.Run();
+
+        Struct1 s1 = new Struct1(123, "KIM");
+        Console.WriteLine($"{s1.ID}, {s1.Name}");
+    }
     /// <summary>
     /// Extension 불러오기
     /// </summary>

@@ -1,9 +1,23 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Formats.Asn1;
+using System.Text.RegularExpressions;
+
 class Solution
 {
-   
+    public int[] solution09032(int[] arr, int k)
+    {
+        var answer = new List<int>();
+        foreach (var item in arr)
+        {
+            answer.Add(k % 2 == 0 ? item + k : item * k);            
+        }        
+        return answer.ToArray();
+    }
+    public string solution0903(string myString)
+    {
+        return Regex.Replace(myString, "[a-k]", "l");
+    }
     public int solution09022(int[] num_list)
     {
         int answer = 0;
