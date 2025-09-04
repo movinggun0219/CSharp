@@ -17,9 +17,9 @@ internal class Program
         Solution sol = new Solution();
 
 
-        //Console.WriteLine(sol.solution0903("abcdevwxyz"));
+        Console.WriteLine(sol.solution0904(1.42));
         //PrintIntarray(sol.solution0819(intArray));
-        Util.PrintIntarray(sol.solution09032(intArray,2));
+        //Util.PrintIntarray(sol.solution0904(intArray,2));
         //sol.soulution09012();
         //sol.solution08122();
 

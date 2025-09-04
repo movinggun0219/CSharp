@@ -5,6 +5,15 @@ using System.Text.RegularExpressions;
 
 class Solution
 {
+     public int solution0904(double flo) 
+     {
+        int answer = (int)flo;
+
+        string str = flo.ToString();
+        string[] strArr = str.Split(".");
+        answer = Convert.ToInt32(strArr[0]);
+        return answer;
+    }
     public int[] solution09032(int[] arr, int k)
     {
         var answer = new List<int>();
