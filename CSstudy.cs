@@ -12,6 +12,41 @@ using System.Text.RegularExpressions;
 
 class CSstudy
 {
+    public string Name
+    {
+        get
+        {
+            return Name;
+        }
+        set
+        {
+            Name = value;
+        }        
+    }
+    class Person
+    {
+        public string Name { get; set; } = "(NO Name)";
+        public string Nickname { get; }
+        public int Age { get; }
+        public bool Enabled { get; } = true;
+        public int Level { get; }
+        public Person()
+        {
+            this.Level = 1;
+        }
+    }
+    public void AutoProperty()
+    {
+        Person p = new Person();
+        Console.WriteLine(p.Name);
+        Console.WriteLine(p.Nickname);
+        Console.WriteLine(p.Age);
+       // p.Age = 10;
+      
+    }
+
+    
+
     /// <summary>
     /// Regex에 대해
     /// </summary>

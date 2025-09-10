@@ -9,15 +9,15 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var intArray = new int[] {1, 2, 3, 100, 99, 98};
-        var int2Arr = new int[,] { { 0, 4 }, { 1, 2 }, { 3, 5 }, { 7, 7 } };
+        var intArray = new int[] { 1, 2, 3, 100, 99, 98 };
+        var int2Arr = new int[,] { { 19, 498, 258, 587 }, { 63, 93, 7, 754 }, { 258, 7, 1000, 723 }, { 587, 754, 723, 81 } };
         var strs = new string[] { "programmers" };
         var strs2 = new string[] { "asdf" };
 
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution0904(1.42));
+        Console.WriteLine(sol.solution09102(int2Arr));
         //PrintIntarray(sol.solution0819(intArray));
         //Util.PrintIntarray(sol.solution0904(intArray,2));
         //sol.soulution09012();
@@ -30,9 +30,10 @@ internal class Program
         //study.TestMyArea();
         //study.ExtensionTest(); 
         //Util.Sort(intArray, Util.AscendingCompare);
-        //Util.PrintArray(intArray);
+        //Util.PrintArray(sol.solution0910);
         //study.RegexSample();
 
+        //study.AutoProperty();
     }
 
     

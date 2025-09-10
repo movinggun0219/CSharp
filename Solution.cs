@@ -2,11 +2,47 @@ using System.Text;
 using System.Collections.Generic;
 using System.Formats.Asn1;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 class Solution
 {
-     public int solution0904(double flo) 
-     {
+    public int solution09102(int[,] arr)
+    {
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            for (int j = 0; j < arr.GetLength(1); j++)
+            {
+                if (arr[i, j] != arr[j, i])
+                {
+                    return 0;
+                }
+            }  
+        }
+        return 1;
+    }
+    public int[,] solution0910(int n)
+    {
+        int[,] answer = new int[n, n];
+
+        // for (int i = 0; i < n; i++)
+        // {
+        //     for (int j = 0; j < n; j++)
+        //     {
+        //         if (i == j)
+        //         {
+        //             answer[i, j] = 1;
+        //         }
+        //     }
+        // }
+
+        for (int i = 0; i < n; i++)
+        {
+            answer[i, i] = 1;
+        }
+        return answer;
+    }   
+     public int solution0904(double flo)
+    {
         int answer = (int)flo;
 
         string str = flo.ToString();
