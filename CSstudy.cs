@@ -12,6 +12,46 @@ using System.Text.RegularExpressions;
 
 class CSstudy
 {
+    class Employee
+    {
+        public int id;
+        string[] tags = new string[10];
+        public int ID
+        {
+            // get
+            // {
+            //     return this.id;
+            // }
+            // set
+            // {
+            //     this.id = value > 0 ? value : 0;
+            // }
+
+            get => this.id;
+            set => this.id = value > 0 ? value : 0;
+        }
+        public string this[int index]
+        {
+            // get
+            // {
+            //     return tags[index];
+            // }
+            // set
+            // {
+            //     tags[index] = value;
+            // }
+
+            get => tags[index];
+            set => tags[index] = value;
+        }
+        EventHandler notified;
+        public event EventHandler Notified
+        {
+            add => this.notified += value;
+            remove => this.notified -= value;
+        }
+        
+    }
     public string Name
     {
         get

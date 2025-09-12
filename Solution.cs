@@ -6,6 +6,17 @@ using System.Diagnostics;
 
 class Solution
 {
+    public int solution0912(string num_str)
+    {
+        int answer = 0;
+
+        foreach (var item in num_str)
+        {
+            answer += item - '0';
+        }
+            
+        return answer;
+    }
     public int solution09102(int[,] arr)
     {
         for (int i = 0; i < arr.GetLength(0); i++)
@@ -16,7 +27,7 @@ class Solution
                 {
                     return 0;
                 }
-            }  
+            }
         }
         return 1;
     }

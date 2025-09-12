@@ -11,13 +11,13 @@ internal class Program
     {
         var intArray = new int[] { 1, 2, 3, 100, 99, 98 };
         var int2Arr = new int[,] { { 19, 498, 258, 587 }, { 63, 93, 7, 754 }, { 258, 7, 1000, 723 }, { 587, 754, 723, 81 } };
-        var strs = new string[] { "programmers" };
+        var strs = new string[] { "123456789" };
         var strs2 = new string[] { "asdf" };
 
         Solution sol = new Solution();
 
 
-        Console.WriteLine(sol.solution09102(int2Arr));
+        Console.WriteLine(sol.solution0912("123456789"));
         //PrintIntarray(sol.solution0819(intArray));
         //Util.PrintIntarray(sol.solution0904(intArray,2));
         //sol.soulution09012();
